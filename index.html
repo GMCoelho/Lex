@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Lex</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/Lex.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+			integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+			crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+			integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+			crossorigin="">
+	</script>
+	
+	<script>
+		// check if Service Worker support exists in browser or not
+		if( 'serviceWorker' in navigator ) {
+			navigator.serviceWorker  
+			   .register( 'service-worker.js' , { scope : ' ' } )  
+			   .then( function( ) { 
+				   console.log('Service Worker registrado com sucesso.');
+			   })
+			   .catch( function(err) {
+				   console.log(`Ocorreu um erro :- ${err}`);
+				   alert('Ocorreu um erro :- ' + err);
+			   });
+		} else {
+			//still not supported
+		}
+	</script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div class="container">
+		<h2 class="posicao">Selecione a localização do ponto no mapa</h2>
+		<div id="mapa"></div>
+		
+		<div id="botao">
+			<div class="meio">
+				<center>
+					<a href="javascript: cadastrar();" class="btn btn-info btn-lg" style="padding-left: 10px; padding-right: 10px;">Cadastrar</a>
+				</center>
+			</div>
+		</div>
+	</div>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/Lex.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
