@@ -23,7 +23,7 @@
 		// check if Service Worker support exists in browser or not
 		if( 'serviceWorker' in navigator ) {
 			navigator.serviceWorker  
-			   .register( 'service-worker.js' , { scope : ' ' } )  
+			   .register( 'service-worker.js' , { scope : './' } )  
 			   .then( function( ) { 
 				   console.log('Service Worker registrado com sucesso.');
 			   })
