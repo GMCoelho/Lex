@@ -19,3 +19,16 @@ self.addEventListener('install', (event) => {
     })
   );
 });
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+
+    // Return cached file if it exists
+    caches.match(event.request).catch(() => {
+
+      // Otherwise make network request to fetch file
+      return fetch(event.request);
+    });
+  );
+});
+
