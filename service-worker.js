@@ -2,14 +2,7 @@ importScripts('js/npm.js');
 
 var CACHE_VERSION = 'app-v1';
 var CACHE_FILES = [
-        '/index.html',
-        '/css/Lex.css',
-        '/fonts/glyphicons-halflings-regular.svg',
-        '/js/Lex.js',
-	'/js/Lex_mapa.js',
-	'/js/bootstrap.js',
-	'/js/booststrap.min.js',
-	'/js/npm.js'
+        '/index.html'
 ];
 
 self.addEventListener('install', function (event) {
