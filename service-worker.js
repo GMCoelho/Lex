@@ -10,10 +10,10 @@ self.addEventListener('install', (event) => {
         '/css/Lex.css',
         '/fonts/glyphicons-halflings-regular.svg',
         '/js/Lex.js',
-		'/js/Lex_mapa.js',
-		'/js/bootstrap.js',
-		'/js/booststrap.min.js',
-		'/js/npm.js'
+	'/js/Lex_mapa.js',
+	'/js/bootstrap.js',
+	'/js/booststrap.min.js',
+	'/js/npm.js'
       ]);
     })
   );
