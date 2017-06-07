@@ -6,7 +6,6 @@ self.addEventListener('install', (event) => {
 
       // Cache all these files
       return cache.addAll([
-        '/',
         '/index.html',
         '/css/Lex.css',
         '/fonts/glyphicons-halflings-regular.svg',
