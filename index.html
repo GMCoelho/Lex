@@ -20,20 +20,17 @@
 	</script>
 	
 	<script>
-		// check if Service Worker support exists in browser or not
-		if( 'serviceWorker' in navigator ) {
-			navigator.serviceWorker  
-			   .register( 'service-worker.js' , { scope : '' } )  
-			   .then( function( ) { 
-				   console.log('Service Worker registrado com sucesso.');
-			   })
-			   .catch( function(err) {
-				   console.log(`Ocorreu um erro :- ${err}`);
-				   alert('Ocorreu um erro :- ' + err);
-			   });
-		} else {
-			//still not supported
-		}
+		if ('serviceWorker' in navigator) {
+			  // Attempt to register it
+			  navigator.serviceWorker.register('/service-worker.js').then(function() {
+			    // Success Message
+			    	console.log('ServiceWorker succesfully registered');
+			  }).catch(function(err) {
+			    // Error Message
+			    	console.log('ServiceWorker registration failed: ', err);
+				alert("Erro na etapa [REGISTRO]: " + err);
+			  });
+			}
 	</script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
