@@ -1,11 +1,7 @@
-self.addEventListener('install', (event) => {
-  event.waitUntil(
+importScripts('js/npm.js');
 
-    // Open a cache store called `v1`
-    caches.open('v1').then((cache) => {
-
-      // Cache all these files
-      return cache.addAll([
+var CACHE_VERSION = 'app-v1';
+var CACHE_FILES = [
         '/index.html',
         '/css/Lex.css',
         '/fonts/glyphicons-halflings-regular.svg',
@@ -14,20 +10,25 @@ self.addEventListener('install', (event) => {
 	'/js/bootstrap.js',
 	'/js/booststrap.min.js',
 	'/js/npm.js'
-      ]);
-    })
-  );
+];
+
+self.addEventListener('install', function (event) {
+    event.waitUntil(
+        caches.open(CACHE_VERSION)
+            .then(function (cache) {
+                console.log('Opened cache');
+                return cache.addAll(CACHE_FILES);
+            })
+    );
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-
-    // Return cached file if it exists
-    caches.match(event.request).catch(() => {
-
-      // Otherwise make network request to fetch file
-      return fetch(event.request);
-    });
-  );
+self.addEventListener('activate', function(event){
+    console.log(event);
 });
+
+self.addEventListener('fetch', function(event){
+  console.log(event.request.url);
+  // return something for each interception
+});
+
 
