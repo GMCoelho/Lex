@@ -1,6 +1,6 @@
 			var mymap = L.map('mapa').setView([-20.35042, -40.34008], 14);
 			var map;
-			L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
+			L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
 				maxZoom: 18
 			}).addTo(mymap);
 			
