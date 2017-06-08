@@ -23,7 +23,7 @@ self.addEventListener('install', function(event) {
       // active ServiceWorker, triggering the `onactivate` event.
       // Together with `Clients.claim()` this allows a worker to take effect
       // immediately in the client(s).
-      consolelog("SW status: [CACHEADO].");
+      console.log("SW status: [CACHEADO].");
       return self.skipWaiting();
     })
   );
@@ -35,7 +35,7 @@ self.addEventListener('activate', function(event) {
 	// `claim()` sets this worker as the active worker for all clients that
 	// match the workers scope and triggers an `oncontrollerchange` event for
 	// the clients.
-        consolelog("SW status: [ATIVADO].");
+        console.log("SW status: [ATIVADO].");
 	return self.clients.claim();
 });
 
