@@ -6,9 +6,10 @@
     padding-top: 3px;
     padding-bottom: 5px;
     text-align: center;
-    font-family: inherit;
+    font-family: fantasy;
+    font-size: 40px;
     font-weight: bold;
-    color: dodgerblue;
+    color: midnightblue;
     border-top: 3px solid;
     border-radius: 3px 3px 0 0;
     border-top-color: royalblue;
