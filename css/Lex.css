@@ -23,3 +23,10 @@
 .meio{
 	padding-top: 10px;
 }
+
+.bordamapa{
+    position: relative;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-color: royalblue;
+}
