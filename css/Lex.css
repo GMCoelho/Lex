@@ -37,7 +37,7 @@
 .botaoCadastrar{
     padding-left: 150px;
     padding-right: 150px;
-    border-top: 0px;
+    border: 0px !important;
     border-radius: 0px 0px 45px 45px;
     background-color: royalblue;
     border-color: royalblue;	
