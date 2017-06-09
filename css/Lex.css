@@ -7,18 +7,17 @@
     padding-bottom: 5px;
     text-align: center;
     font-family: fantasy;
-    font-size: 40px;
-    font-weight: bold;
-    color: midnightblue;
+    font-size: 35px;
+    color: #FFFFFF;
+    background-color: midnightblue;
     border-top: 3px solid;
-    border-radius: 3px 3px 0 0;
-    border-top-color: royalblue;
-    /* border-bottom: 1px solid; */
-    border-bottom-color: royalblue;
+    border-radius: 45px 45px 0 0;
+    border-top-color: midnightblue;
+    border-bottom-color: midnightblue;
     border-left: 1px solid;
-    border-left-color: royalblue;
+    border-left-color: midnightblue;
     border-right: 1px solid;
-    border-right-color: royalblue;
+    border-right-color: midnightblue;
     margin-bottom: 0px;
 }
 
@@ -31,16 +30,15 @@
     border-left: 1px solid;
     border-right: 1px solid;
     border-bottom: 3px solid;
-    border-color: royalblue;
+    border-color: midnightblue;
 }
 
 .botaoCadastrar{
-    padding-left: 150px;
-    padding-right: 150px;
+    width: 100%;
     border: 0px !important;
     border-radius: 0px 0px 45px 45px;
-    background-color: royalblue;
-    border-color: royalblue;	
+    background-color: midnightblue;
+    border-color: midnightblue;	
 }
 
 .botaoCadastrar:hover, .botaoCadastrar:active, .botaoCadastrar:focus{
