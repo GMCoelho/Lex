@@ -32,3 +32,18 @@
     border-bottom: 3px solid;
     border-color: royalblue;
 }
+
+.botaoCadastrar{
+    padding-left: 150px;
+    padding-right: 150px;
+    border-top: 0px;
+    border-radius: 0px 0px 45px 45px;
+    background-color: royalblue;
+    border-color: royalblue;	
+}
+
+.botaoCadastrar:hover{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 3);
+    background-color: midnightblue;
+    border-color: royalblue;
+}
