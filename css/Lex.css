@@ -44,7 +44,7 @@
 }
 
 .botaoCadastrar:hover{
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 3);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.75);
     background-color: midnightblue;
     border-color: royalblue;
 }
