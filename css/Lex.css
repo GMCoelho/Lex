@@ -10,13 +10,14 @@
     font-weight: bold;
     color: dodgerblue;
     border-top: 3px solid;
+    border-radius: 3px 3px 0 0;
     border-top-color: royalblue;
     /* border-bottom: 1px solid; */
-    border-bottom-color: dodgerblue;
+    border-bottom-color: royalblue;
     border-left: 1px solid;
-    border-left-color: dodgerblue;
+    border-left-color: royalblue;
     border-right: 1px solid;
-    border-right-color: dodgerblue;
+    border-right-color: royalblue;
     margin-bottom: 0px;
 }
 
