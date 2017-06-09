@@ -43,7 +43,7 @@
     border-color: royalblue;	
 }
 
-.botaoCadastrar:hover, .botaoCadastrar:active{
+.botaoCadastrar:hover, .botaoCadastrar:active, .botaoCadastrar:focus{
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.75);
     background-color: midnightblue;
     border-color: royalblue;
