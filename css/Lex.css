@@ -20,6 +20,7 @@
 	    border-right: 1px solid;
 	    border-right-color: midnightblue;
 	    margin-bottom: 0px;
+	    margin-top: 10px;
 	}
 }
 
@@ -43,11 +44,13 @@
 	    border-right: 1px solid;
 	    border-right-color: midnightblue;
 	    margin-bottom: 0px;
+	    margin-top: 10px;
 	}
 }
 
 .meio{
 	padding-top: 0px;
+	margin-bottom: 10px;
 }
 
 .bordamapa{
