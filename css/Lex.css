@@ -23,13 +23,13 @@
 	}
 }
 
-@media screen and (max-width: 768){
+@media screen and (max-width: 768px){
 	.posicao{
 	    padding-top: 3px;
 	    padding-bottom: 5px;
 	    text-align: center;
 	    font-family: 'Bubbler One', sans-serif;
-	    font-size: 25px;
+	    font-size: 25px !important;
 	    color: #FFFFFF;
 	    background-color: midnightblue;
 	    border-top: 3px solid;
