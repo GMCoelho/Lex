@@ -63,9 +63,12 @@
 .botaoCadastrar{
     width: 100%;
     font-family: 'Bubbler One', sans-serif;
+    font-size: x-large;
     border: 0px;
     border-top: 3px !important;
     border-radius: 0px 0px 45px 45px;
+    padding-top: 15px;
+    paddinf-bottom: 15px;
     background-color: midnightblue;
     border-color: midnightblue;	
 }
