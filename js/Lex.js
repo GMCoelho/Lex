@@ -25,7 +25,7 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 				}
 			function abreModalCadastro(e) {
 				var tituloModal = document.getElementById("PostoLoc");
-				tituloModal.innerHTML = "Posto em" + e.latlng.toString();
+				tituloModal.innerHTML = "Posto em: " + e.latlng.toString();
 				$('#myModal').modal('show');
 			}				
 
