@@ -8,13 +8,10 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 			var markers = new Array();
 
 			function cadastrar(){
-				if(newMarker != null){function(){
-					
-				}.then(
+				if(newMarker != null){
+					newMarker.remove();
+				}.then(function(){
 					alert("Posto cadastrado!");
-					$(markers).each(function(){
-						this.remove();
-					});
 				})
 				else{
 					alert("Você ainda não selecionou a localização do ponto.");
