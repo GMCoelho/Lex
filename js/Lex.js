@@ -13,7 +13,7 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 					alert("Posto cadastrado!");
 				}
 				else{
-					alert("Ocorreu um erro inexperado. Recarregue a página e selecione novamente o posto.");
+					alert("Ocorreu um erro inesperado. Recarregue a página e selecione novamente o posto.");
 				}
 			}
 			function onMapClick(e) {
@@ -25,7 +25,8 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 				}
 			function abreModalCadastro(e) {
 				var tituloModal = document.getElementById("PostoLoc");
-				tituloModal.innerHTML = "Posto em: " + e.latlng.toString();
+				var locAux = e.latlng;
+				tituloModal.innerHTML = "Posto em: </p>Lat: " + locAux.lat.toString() + ", Lon: " + locAux.lng.toString();
 				$('#myModal').modal('show');
 			}				
 
