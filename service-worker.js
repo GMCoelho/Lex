@@ -2,10 +2,10 @@ var cacheName = 'lex-v1';
 
 // Assets to cache
 var assetsToCache = [
-  'index.html',
-  'js/Lex.js',
-  'js/Lex_mapa.js',
-  'css/Lex.css'
+  '/index.html',
+  '/js/Lex.js',
+  '/js/Lex_mapa.js',
+  '/css/Lex.css'
 ];
 
 self.addEventListener('install', function(event) {
