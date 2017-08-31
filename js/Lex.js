@@ -21,9 +21,11 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 				newMarker = L.marker(e.latlng, {opacity: 1}).addTo(mymap);
 				newMarker.bindTooltip("Latitude e Longitude: "+
 					e.latlng.toString()).openTooltip();
-				abreModalCadastro();
+				abreModalCadastro(e);
 				}
-			function abreModalCadastro() {
+			function abreModalCadastro(e) {
+				var tituloModal = document.getElementById("PostoLoc");
+				tituloModal.innerHTML = "Posto em" + e.latlng.toString();
 				$('#myModal').modal('show');
 			}				
 
