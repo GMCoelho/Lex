@@ -1,10 +1,15 @@
-console.log("Abre SW");
-
 var cacheName = 'lex-v1';
 
 // Assets to cache
 var assetsToCache = [
-  'index.html'
+  'index.html',
+  'css/Lex.css',
+  'css/bootstrap.css',
+  'css/bootstrap.min.css',
+  'js/Lex-mapa.js',
+  'js/Lex.js',
+  'js/bootstrap.js',
+  'js/bootstrap.min.js'
 ];
 
 self.addEventListener('install', function(event) {
