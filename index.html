@@ -42,8 +42,8 @@
   </head>
   <body>
 	<div class="container">
-	<div id="myModal" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
+	<div id="meuModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog modal-sm">
 
 	    <!-- Modal content-->
 	    <div class="modal-content">
@@ -52,7 +52,34 @@
 		<h4 class="modal-title" id="PostoLoc"></h4>
 	      </div>
 	      <div class="modal-body">
-		<p>Tem certeza?</p>
+		<p>
+		<form>
+			  <div class="form-group">
+			    <input type="text" class="form-control" id="nomePosto" placeholder="Exemplo: Posto ABC">
+			  </div>
+			  <div class="form-group">
+			    <h5>Preços:</h5></p>
+			    <label for="precoGC">Gasolina Comum (GC):</label>
+			    <input type="text" class="form-control" id="precoGC">
+			
+			    <label for="precoGA">Gasolina Aditivada (GA):</label>
+			    <input type="text" class="form-control" id="precoGA">
+			
+			    <label for="precoEt">Etanol (Et):</label>
+			    <input type="text" class="form-control" id="precoEt">
+			
+			    <label for="precoDs">Diesel (Ds):</label>
+			    <input type="text" class="form-control" id="precoDs">
+			
+			    <label for="precoGN">Gás Natural Veicular (GNV):</label>
+			    <input type="text" class="form-control" id="precoGN">
+			  </div>
+			  <div class="checkbox">
+			    <label><input type="checkbox"> Eu recomendo esse Posto!</label>
+			  </div>
+			  <!--<button type="submit" class="btn btn-default">Submit</button>-->
+		</form>
+		</p>
 	      </div>
 	      <div class="modal-footer">
 		<button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
