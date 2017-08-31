@@ -20,10 +20,10 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 			function onMapClick(e) {
 				//Função para checar posto próximo... THEN:
 				newMarker = L.marker(e.latlng, {opacity: 1}).addTo(mymap);
-				newMarker.bindTooltip("Latitude e Longitude: "+ e.latlng.toString()).openTooltip();
-				
-			}.then(function() {
-    				$('#myModal').modal('show');)
+				newMarker.bindTooltip("Latitude e Longitude: "+
+				e.latlng.toString()).openTooltip().then(function() {
+    					$('#myModal').modal('show');)
+				};	
 			}
 			
 			function cadastrarN(){
