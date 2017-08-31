@@ -9,12 +9,12 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 
 			function cadastrar(){
 				if(newMarker != null){
-					newMarker.remove();
-				}.then(function(){
-					alert("Posto cadastrado!");
-				})
+					newMarker.remove().then(function(){
+							alert("Posto cadastrado!");
+							});
+				}
 				else{
-					alert("Você ainda não selecionou a localização do ponto.");
+					alert("Ocorreu um erro inexperado. Recarregue a página e selecione novamente o posto.");
 				}
 			}
 			function onMapClick(e) {
