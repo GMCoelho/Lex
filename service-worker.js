@@ -1,3 +1,5 @@
+console.log("Abre SW");
+
 var cacheName = 'lex-v1';
 
 // Assets to cache
