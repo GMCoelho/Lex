@@ -24,8 +24,8 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 				abreModalCadastro();
 				}
 			function abreModalCadastro() {
-					$('#myModal').modal('show');
-				    });				
+				$('#myModal').modal('show');
+			}				
 
 			function cadastrarN(){
 				if(newMarker != null){
