@@ -2,7 +2,7 @@ var cacheName = 'lex-v1';
 
 // Assets to cache
 var assetsToCache = [
-  '/index.html'
+  'index.html'
 ];
 
 self.addEventListener('install', function(event) {
