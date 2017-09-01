@@ -9,7 +9,6 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 			var conf = false;
 
 			$('#editarLoc').on('click', function(){
-				console.log("EDITAR LOCALIZAÇÃO -> CONF = FALSE");
 				conf = false;
 				newMarker.setOpacity(0.5);
 			});
@@ -30,7 +29,7 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 				newMarker = L.marker(e.latlng, {opacity: 1}).addTo(mymap);
 				newMarker.bindTooltip(
 					"Latitude: " + e.latlng.lat.toString() +
-					"Longitude: " + e.latlng.lng.toString()
+					" Longitude: " + e.latlng.lng.toString()
 					).openTooltip();
 				conf = true;
 				abreModalCadastro(e);
