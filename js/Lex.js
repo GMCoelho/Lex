@@ -23,6 +23,9 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 			}
 			function onMapClick(e) {
 				//Função para checar posto próximo... THEN:
+				if(newMarker != null){
+					mymap.removeLayer(newMarker);
+				}
 				newMarker = L.marker(e.latlng, {opacity: 1}).addTo(mymap);
 				newMarker.bindTooltip("Latitude e Longitude: "+
 					e.latlng.toString()).openTooltip();
