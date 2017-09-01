@@ -1,6 +1,6 @@
 var ready = false;
 var htmlBody = document.getElementById("corpo");
-htmlBody.innerHTML = "<img src="30.svg">"
+htmlBody.innerHTML = "<img src="Lex/30.svg">"
 $(document).ready(function() { 
 	ready = true;
 	htmlBody.innerHTML = "<div><h1>Alo Alo ato aqui</h1></div>"
