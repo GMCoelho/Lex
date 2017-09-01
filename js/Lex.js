@@ -7,11 +7,12 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 			var newMarker = null;
 			var markers = new Array();
 			var conf = false;
-			function editarLoc(){
+
+			$('#editarLoc').on('click', function(){
 				console.log("EDITAR LOCALIZAÇÃO -> CONF = FALSE");
 				conf = false;
 				mymap.removeLayer(newMarker);
-			}
+			});
 			function cadastrar(){
 				if(newMarker != null && conf == true){
 					mymap.removeLayer(newMarker);
