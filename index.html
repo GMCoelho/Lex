@@ -1,111 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Lex</title>
-    <!--<link rel="stylesheet" href="css/font-awesome.min.css">-->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Lex</title>
+        <!--<link rel="stylesheet" href="css/font-awesome.min.css">-->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/Lex.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
-			integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
-			crossorigin=""/>
-	<link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
-	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
-			integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
-			crossorigin="">
-	</script>
-	
-	<script>
-		if ('serviceWorker' in navigator) {
-			  // Attempt to register it
-			  navigator.serviceWorker.register('service-worker.js').then(function() {
-			    // Success Message
-			    	console.log('ServiceWorker succesfully registered');
-			  }).catch(function(err) {
-			    // Error Message
-			    	console.log('ServiceWorker registration failed: ', err);
-				alert("Erro na etapa [REGISTRO]: " + err);
-			  });
-			}
-	</script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-  <div class="container">
-	<div id="meuModal" class="modal fade" role="dialog">
-	  <div class="modal-dialog modal-sm">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/Lex.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+              integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+              crossorigin=""/>
+        <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+                integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+                crossorigin="">
+        </script>
 
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal">&times;</button>
-		      <center><h5 class="modal-title" id="PostoLoc"></h5></center>
-	      </div>
-	      <div class="modal-body" style="font-family: 'Bubbler One', sans-serif; font-weight: bold !important;">
-		<p>
-		<form>
-			  <div class="form-group">
-			    <label for="nomePosto">Nome:</label>
-			    <input type="text" class="form-control" id="nomePosto" placeholder="Exemplo: Posto ABC">
-			  </div>
-			  <div class="form-group">
-				  <center><h5>Informe ao menos um preço abaixo:</h5></center></p>
-			    <label for="precoGC">Gasolina Comum (GC):</label>
-			    <input type="text" class="form-control" id="precoGC">
-			
-			    <label for="precoGA">Gasolina Aditivada (GA):</label>
-			    <input type="text" class="form-control" id="precoGA">
-			
-			    <label for="precoEt">Etanol (Et):</label>
-			    <input type="text" class="form-control" id="precoEt">
-			
-			    <label for="precoDs">Diesel (Ds):</label>
-			    <input type="text" class="form-control" id="precoDs">
-			
-			    <label for="precoGN">Gás Natural Veicular (GNV):</label>
-			    <input type="text" class="form-control" id="precoGN">
-			  </div>
-			  <div class="checkbox">
-			    <label><input type="checkbox"> Eu recomendo esse Posto!</label>
-			  </div>
-			  <!--<button type="submit" class="btn btn-default">Submit</button>-->
-		</form>
-		</p>
-	      </div>
-	      <div class="modal-footer">
-		<button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
-		<a type="button" class="btn btn-warning" data-dismiss="modal" id="editarLoc">Editar Localização</a>
-	      </div>
-	    </div>
+        <script>
+            if ('serviceWorker' in navigator) {
+                // Attempt to register it
+                navigator.serviceWorker.register('service-worker.js').then(function () {
+                    // Success Message
+                    console.log('ServiceWorker succesfully registered');
+                }).catch(function (err) {
+                    // Error Message
+                    console.log('ServiceWorker registration failed: ', err);
+                    alert("Erro na etapa [REGISTRO]: " + err);
+                });
+            }
+        </script>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            <div id="meuModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-sm">
 
-	  </div>
-	</div>
-		<div class="posicao">Informe a localização do posto no mapa:</div>
-		<div id="mapa" class="bordamapa"></div>
-		
-		<div id="botao">
-			<div class="meio">
-				<center>
-					<a href="javascript: cadastrar();" class="botaoCadastrar btn btn-info btn-lg"><i class='fa fa-plus' style="font-size: large;"></i> Cadastrar</a>
-				</center>
-			</div>
-		</div>
-	</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/Lex.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <center><h5 class="modal-title" id="PostoLoc"></h5></center>
+                        </div>
+                        <div class="modal-body" style="font-family: 'Bubbler One', sans-serif; font-weight: bold !important;">
+                            <p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="nomePosto">Nome:</label>
+                                    <input type="text" class="form-control" id="nomePosto" placeholder="Exemplo: Posto ABC">
+                                </div>
+                                <div class="form-group">
+                                    <center><h5>Informe ao menos um preço abaixo:</h5></center><p></p>
+                                    <label for="precoGC">Gasolina Comum (GC):</label>
+                                    <input type="text" class="form-control" id="precoGC">
+
+                                    <label for="precoGA">Gasolina Aditivada (GA):</label>
+                                    <input type="text" class="form-control" id="precoGA">
+
+                                    <label for="precoEt">Etanol (Et):</label>
+                                    <input type="text" class="form-control" id="precoEt">
+
+                                    <label for="precoDs">Diesel (Ds):</label>
+                                    <input type="text" class="form-control" id="precoDs">
+
+                                    <label for="precoGN">Gás Natural Veicular (GNV):</label>
+                                    <input type="text" class="form-control" id="precoGN">
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox"> Eu recomendo esse Posto!</label>
+                                </div>
+                                <!--<button type="submit" class="btn btn-default">Submit</button>-->
+                            </form>
+                            <p></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
+                            <a class="btn btn-warning" data-dismiss="modal" id="editarLoc">Editar Localização</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="posicao">Informe a localização do posto no mapa:</div>
+            <div id="mapa" class="bordamapa"></div>
+
+            <div id="botao">
+                <div class="meio">
+                    <center>
+                        <a href="javascript: cadastrar();" class="botaoCadastrar btn btn-info btn-lg"><i class='fa fa-plus' style="font-size: large;"></i> Cadastrar</a>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/Lex.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
 </html>
