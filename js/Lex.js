@@ -1,10 +1,3 @@
-var ready = false;
-var htmlBody = document.getElementById("corpo");
-htmlBody.innerHTML = "<img src="Lex/30.svg">"
-$(document).ready(function() { 
-	ready = true;
-	htmlBody.innerHTML = "<div><h1>Alo Alo ato aqui</h1></div>"
-});
 var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 			L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
 				maxZoom: 18
