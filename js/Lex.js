@@ -8,12 +8,13 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 			var markers = new Array();
 			var conf = false;
 			function editarLoc(){
+				console.log("EDITAR LOCALIZAÇÃO -> CONF = FALSE");
 				conf = false;
-				newMarker.remove();
+				mymap.removeLayer(newMarker);
 			}
 			function cadastrar(){
 				if(newMarker != null && conf == true){
-					newMarker.remove();
+					mymap.removeLayer(newMarker);
 					alert("Posto cadastrado!");
 				}
 				else{
