@@ -11,7 +11,7 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 			$('#editarLoc').on('click', function(){
 				console.log("EDITAR LOCALIZAÇÃO -> CONF = FALSE");
 				conf = false;
-				mymap.removeLayer(newMarker);
+				newMarker.setOpacity(0.5);
 			});
 			function cadastrar(){
 				if(newMarker != null && conf == true){
@@ -19,7 +19,7 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 					alert("Posto cadastrado!");
 				}
 				else{
-					alert("Por favor, selecione novamente a localização o posto.");
+					alert("Por favor, selecione uma localização o posto.");
 				}
 			}
 			function onMapClick(e) {
@@ -28,8 +28,10 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 					mymap.removeLayer(newMarker);
 				}
 				newMarker = L.marker(e.latlng, {opacity: 1}).addTo(mymap);
-				newMarker.bindTooltip("Latitude e Longitude: "+
-					e.latlng.toString()).openTooltip();
+				newMarker.bindTooltip(
+					"Latitude: " + e.latlng.lat.toString() +
+					"Longitude: " + e.latlng.lng.toString()
+					).openTooltip();
 				conf = true;
 				abreModalCadastro(e);
 				}
