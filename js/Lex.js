@@ -9,9 +9,10 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 			var conf = false;
 			function editarLoc(){
 				conf = false;
+				newMarker.remove();
 			}
 			function cadastrar(){
-				if(newMarker != null && conf){
+				if(newMarker != null && conf == true){
 					newMarker.remove();
 					alert("Posto cadastrado!");
 				}
