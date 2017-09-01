@@ -6,7 +6,6 @@ var assetsToCache = [
   'css/Lex.css',
   'css/bootstrap.css',
   'css/bootstrap.min.css',
-  'js/Lex-mapa.js',
   'js/Lex.js',
   'js/bootstrap.js',
   'js/bootstrap.min.js'
