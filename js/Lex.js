@@ -54,14 +54,14 @@ mymap.on('click',
 			mymap.off('click', onMapClick);
 		});
 		newMarker.on('dragend', function(e){
+			setTimeout(function() {
+				mymap.on('click', onMapClick);
+			}, 10);
 			abreModalCadastro(e);
 			newMarker.bindTooltip(
 			"Latitude: " + e.latlng.lat.toString() +
 			" Longitude: " + e.latlng.lng.toString()
 			).openTooltip();
-			setTimeout(function() {
-				mymap.on('click', onMapClick);
-			}, 10);
 		});
 		if(staticMarker == true){
 			newMarker.addTo(mymap);
