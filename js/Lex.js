@@ -1,12 +1,14 @@
 $(document).ready(function(){
 	$('#colab-wrn').hide();
 	$('#colab-scs').hide();
-
-	var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
-				L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
-					maxZoom: 18
-				}).addTo(mymap);
 });
+	//Adiciona o mapa na página no id 'mapa' informado
+	var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
+	//Carrega a tile do mapa no objeto 'mymap'
+	L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
+		maxZoom: 18
+	}).addTo(mymap);
+
 	var cont = 0;
 	var newMarker = null;
 	var markers = new Array();
