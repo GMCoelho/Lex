@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$('#colab-wrn').hide();
 	$('#colab-scs').hide();
+	$('#colab-tip').hide();
 });
 	//Adiciona o mapa na página no id 'mapa' informado
 	var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
@@ -17,11 +18,13 @@ $(document).ready(function(){
 	$('#editarLoc').on('click', function(){
 		conf = false;
 		newMarker.setOpacity(0.5);
+		$('#colab-tip').show();
 	});
 
 			function cadastrar(){
 				$('#colab-wrn').hide();
 				$('#colab-scs').hide();
+				$('#colab-tip').hide();
 				if(newMarker != null && conf == true){
 					mymap.removeLayer(newMarker);
 					$('#colab-scs').show();
@@ -36,7 +39,7 @@ $(document).ready(function(){
 				if(newMarker != null){
 					mymap.removeLayer(newMarker);
 				}
-				newMarker = L.marker(e.latlng, {opacity: 1}).addTo(mymap);
+				newMarker = L.marker(e.latlng, {draggable:'true'}, {opacity: 1}).addTo(mymap);
 				newMarker.bindTooltip(
 					"Latitude: " + e.latlng.lat.toString() +
 					" Longitude: " + e.latlng.lng.toString()
