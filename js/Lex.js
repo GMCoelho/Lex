@@ -13,12 +13,14 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 				newMarker.setOpacity(0.5);
 			});
 			function cadastrar(){
+				$('#colab-wrn').hide();
+				$('#colab-scs').hide();
 				if(newMarker != null && conf == true){
 					mymap.removeLayer(newMarker);
-					$('#colab').show("<div class='alert alert-success alert-dismissible' role='alert'>" + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><br/><span aria-hidden='true'>&times;</span><br/></button><br/><strong>Obrigado por colaborar!</strong> Sua contribuição será validada em breve.<br/></div>");
+					$('#colab-scs').show();
 				}
 				else{
-					$('#colab').show("<div class='alert alert-warning alert-dismissible' role='alert'>" + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><br/><span aria-hidden='true'>&times;</span><br/></button><br/><strong>Atenção:</strong> é necessário selecionar a localização do posto no mapa.<br/></div>");
+					$('#colab-wrn').show();
 				}
 				conf = false;
 			}
