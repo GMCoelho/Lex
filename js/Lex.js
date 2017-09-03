@@ -13,12 +13,16 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 				newMarker.setOpacity(0.5);
 			});
 			function cadastrar(){
+				var textoalert;
+				var alertid = document.getElementById("colab-success");
 				if(newMarker != null && conf == true){
 					mymap.removeLayer(newMarker);
-					alert("Posto cadastrado!");
+					textoalert = "<strong>Obrigado por colaborar!</strong> Sua contribuição será validada em breve."
+					alertid.innerHTML = textoalert;
+					$(#colab-success).alert();
 				}
 				else{
-					alert("Por favor, selecione uma localização o posto.");
+					$(#colab-success).alert();
 				}
 			}
 			function onMapClick(e) {
