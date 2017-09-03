@@ -39,14 +39,14 @@ $(document).ready(function(){
 				//Função para checar posto próximo... THEN:
 				if(newMarker != null){
 					staticMarker = true;
-					newMarker.setOpacity(1);
-					newMarker.on('dragend', function(e){
+					newMarker.on('drag', function(e){
 						newMarker.bindTooltip(
 						"Latitude: " + e.latlng.lat.toString() +
 						" Longitude: " + e.latlng.lng.toString()
 						).openTooltip();
 						conf = true;
 						staticMarker = false;
+						newMarker.setOpacity(1);
 						abreModalCadastro(e);
 					});
 					if(staticMarker == true){
