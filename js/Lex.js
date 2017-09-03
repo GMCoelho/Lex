@@ -54,7 +54,7 @@ mymap.on('click',
 			mymap.off('click', onMapClick);
 		});
 		newMarker.on('dragend', function(e){
-			setTimeout(function() {
+			setInterval(function() {
 				mymap.on('click', onMapClick);
 			}, 10);
 			abreModalCadastro(e);
