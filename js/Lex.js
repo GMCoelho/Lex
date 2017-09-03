@@ -38,68 +38,46 @@ function editar(){
 				}
 				conf = false;
 			}
-			function onMapClick(e) {
-				//Função para checar posto próximo... THEN:
-				if(newMarker != null){
-					staticMarker = true;
-					newMarker.on('move', function(e){
-						newMarker.bindTooltip(
-						"Latitude: " + e.latlng.lat.toString() +
-						" Longitude: " + e.latlng.lng.toString()
-						).openTooltip();
-						conf = true;
-						staticMarker = false;
-						newMarker.setOpacity(1);
-						abreModalCadastro(e);
-					});
-					if(staticMarker == true){
-						mymap.removeLayer(newMarker);
-					}
-				}
-				newMarker = L.marker(e.latlng, {draggable:'true'}, {opacity: 1}).addTo(mymap);
-				setMarker(e);
-				}
-
-
-			function setMarker(e){
-				newMarker.bindTooltip(
-					"Latitude: " + e.latlng.lat.toString() +
-					" Longitude: " + e.latlng.lng.toString()
-					).openTooltip();
-				conf = true;
-				abreModalCadastro(e);
+mymap.on('click', 
+	function onMapClick(e){
+	//Função para checar posto próximo... THEN:
+	staticMarker = true;
+		newMarker.on('dragstart', function(e){
+			mymap.off('click', onMapClick);
+			newMarker.setOpacity(1);
+			conf = true;
+			staticMarker = false;
+		});
+		newMarker.on('dragend', function(e){
+			setTimeout(function() {
+        			mymap.on('click', onMapClick);
+      			}, 10);
+			newMarker.bindTooltip(
+			"Latitude: " + e.latlng.lat.toString() +
+			" Longitude: " + e.latlng.lng.toString()
+			).openTooltip();
+			abreModalCadastro(e);
+		});
+		if(staticMarker == true){
+			if(newMarker != null){
+				mymap.removeLayer(newMarker);
 			}
-			function abreModalCadastro(e) {
-				var tituloModal = document.getElementById("PostoLoc");
-				var locAux = e.latlng;
-				tituloModal.innerHTML = "Posto em: </p>Lat: " + locAux.lat.toString() + "</br>Lon: " + locAux.lng.toString();
-				$('#meuModal').modal('show');
-			}				
+			newMarker = L.marker(e.latlng, {draggable:'true'}, {opacity: 1}).addTo(mymap);
+			setMarker(e);
+		}
+});
 
-			function cadastrarN(){
-				if(newMarker != null){
-					alert("Posto(s) cadastrado(s)!");
-					$(markers).each(function(){
-						this.remove();
-					});
-				}
-				else{
-					alert("Você ainda não selecionou a localização do ponto.");
-				}
-			}
-			function onMapClickN(e) {
-				if(cont == 0){
-					newMarker = L.marker(e.latlng, {opacity: 1}).addTo(mymap);
-					newMarker.bindTooltip("Latitude e Longitude: "+ e.latlng.toString()).openTooltip();
-					markers[cont] = newMarker;
-				}
-				else{
-					markers[cont-1].setOpacity(0.65);
-					newMarker = L.marker(e.latlng, {opacity: 1}).addTo(mymap);
-					newMarker.bindTooltip("Latitude e Longitude: "+ e.latlng.toString()).openTooltip();	
-					markers[cont] = newMarker;
-				}
-				cont++;
-			}
-
-			mymap.on('click', onMapClick);
+function setMarker(e){
+	newMarker.bindTooltip(
+		"Latitude: " + e.latlng.lat.toString() +
+		" Longitude: " + e.latlng.lng.toString()
+		).openTooltip();
+	conf = true;
+	abreModalCadastro(e);
+}
+function abreModalCadastro(e) {
+	var tituloModal = document.getElementById("PostoLoc");
+	var locAux = e.latlng;
+	tituloModal.innerHTML = "Posto em: </p>Lat: " + locAux.lat.toString() + "</br>Lon: " + locAux.lng.toString();
+	$('#meuModal').modal('show');
+}
