@@ -14,15 +14,29 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 			});
 			function cadastrar(){
 				var textoalert;
-				var alertid = document.getElementById("colab-success");
+				var alertid = document.getElementById("colab");
 				if(newMarker != null && conf == true){
 					mymap.removeLayer(newMarker);
-					textoalert = "<strong>Obrigado por colaborar!</strong> Sua contribuição será validada em breve."
+					
+textoalert = "<div class="alert alert-success alert-dismissible fade show" role="alert">\n
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n
+                    <span aria-hidden="true">&times;</span>\n
+                </button>\n
+                <strong>Obrigado por colaborar!</strong> Sua contribuição será validada em breve.\n
+            </div>"
+					
 					alertid.innerHTML = textoalert;
-					$(#colab-success).alert();
+					$(.alert).alert();
 				}
 				else{
-					$(#colab-success).alert();
+textoalert = "<div class="alert alert-warning alert-dismissible fade show" role="alert">\n
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n
+                    <span aria-hidden="true">&times;</span>\n
+                </button>\n
+                <strong>Atenção:</strong> é necessário selecionar a localização do posto no mapa.\n
+            </div>"
+					alertid.innerHTML = textoalert;
+					$(.alert).alert();
 				}
 			}
 			function onMapClick(e) {
