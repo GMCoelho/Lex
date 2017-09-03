@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	$("#colab-scs").css("visibility", "hidden");
-	$("#colab-wrn").css("visibility", "hidden");
+	$('#colab-wrn').hide();
+	$('#colab-scs').hide();
 
 	var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 				L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
