@@ -10,9 +10,7 @@ $(document).ready(function(){
 		maxZoom: 18
 	}).addTo(mymap);
 
-	var cont = 0;
-	var newMarker = null;
-	var markers = new Array();
+	var newMarker;
 	var conf = false;
 	var staticMarker = true;
 
@@ -25,49 +23,58 @@ function editar(){
 	$('#colab-tip').show();
 }
 
-			function cadastrar(){
-				$('#colab-wrn').hide();
-				$('#colab-scs').hide();
-				$('#colab-tip').hide();
-				if(newMarker != null && conf == true){
-					mymap.removeLayer(newMarker);
-					$('#colab-scs').show();
-				}
-				else{
-					$('#colab-wrn').show();
-				}
-				conf = false;
-			}
+function cadastrar(){
+	$('#colab-wrn').hide();
+	$('#colab-scs').hide();
+	$('#colab-tip').hide();
+	if(newMarker != null && conf == true){
+		mymap.removeLayer(newMarker);
+		$('#colab-scs').show();
+	}
+	else{
+		$('#colab-wrn').show();
+	}
+	conf = false;
+}
+
 mymap.on('click', 
 	function onMapClick(e){
-	//Função para checar posto próximo... THEN:
+	var pos = e.latlng;
+	
+	if(mymap.hasLayer(newMarker)){
+		mymap.removeLayer(newMarker);
+	}
+	
+	newMarker = L.marker(pos, {draggable:'true'}, {opacity: 1});
 	staticMarker = true;
-		if(newMarker != null){
-			newMarker.on('dragstart', function(e){
-				mymap.off('click', onMapClick);
-				newMarker.setOpacity(1);
-				conf = true;
-				staticMarker = false;
-			});
-			newMarker.on('dragend', function(e){
-				setTimeout(function() {
-					mymap.on('click', onMapClick);
-				}, 10);
-				newMarker.bindTooltip(
-				"Latitude: " + e.latlng.lat.toString() +
-				" Longitude: " + e.latlng.lng.toString()
-				).openTooltip();
-				abreModalCadastro(e);
-			});
-		}
+		newMarker.on('dragstart', function(e){
+			newMarker.setOpacity(1);
+			conf = true;
+			staticMarker = false;
+			mymap.off('click', onMapClick);
+		});
+		newMarker.on('dragend', function(e){
+			newMarker.bindTooltip(
+			"Latitude: " + e.latlng.lat.toString() +
+			" Longitude: " + e.latlng.lng.toString()
+			).openTooltip();
+			setTimeout(function() {
+				mymap.on('click', onMapClick);
+			}, 10);
+			abreModalCadastro(e);
+		});
 		if(staticMarker == true){
-			if(newMarker != null){
-				mymap.removeLayer(newMarker);
-			}
-			newMarker = L.marker(e.latlng, {draggable:'true'}, {opacity: 1}).addTo(mymap);
+			newMarker.addTo(mymap);
 			setMarker(e);
 		}
 });
+
+/*newMarker.on('dragstart', function(e){
+	mymap.off('click', onMapClick);
+	newMarker.setOpacity(1);
+	conf = true;
+	staticMarker = false;
+});*/
 
 function setMarker(e){
 	newMarker.bindTooltip(
