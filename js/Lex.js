@@ -54,6 +54,7 @@ mymap.on('click',
 			mymap.off('click', onMapClick);
 		});
 		newMarker.on('dragend', function(e){
+			abreModalCadastro(e);
 			newMarker.bindTooltip(
 			"Latitude: " + e.latlng.lat.toString() +
 			" Longitude: " + e.latlng.lng.toString()
@@ -61,7 +62,6 @@ mymap.on('click',
 			setTimeout(function() {
 				mymap.on('click', onMapClick);
 			}, 10);
-			abreModalCadastro(e);
 		});
 		if(staticMarker == true){
 			newMarker.addTo(mymap);
