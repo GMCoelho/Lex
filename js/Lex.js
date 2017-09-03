@@ -14,6 +14,7 @@ $(document).ready(function(){
 	var newMarker = null;
 	var markers = new Array();
 	var conf = false;
+	var staticMarker = true;
 
 	$('#editarLoc').on('click', function(){
 		conf = false;
@@ -37,18 +38,23 @@ $(document).ready(function(){
 			function onMapClick(e) {
 				//Função para checar posto próximo... THEN:
 				if(newMarker != null){
-					mymap.removeLayer(newMarker);
-				}
-				newMarker = L.marker(e.latlng, {draggable:'true'}, {opacity: 1}).addTo(mymap);
-				setMarker(e);
+					staticMarker = true;
+					newMarker.setOpacity(1);
 					newMarker.on('dragend', function(e){
 						newMarker.bindTooltip(
 						"Latitude: " + e.latlng.lat.toString() +
 						" Longitude: " + e.latlng.lng.toString()
 						).openTooltip();
 						conf = true;
+						staticMarker = false;
 						abreModalCadastro(e);
 					});
+					if(staticMarker == true){
+						mymap.removeLayer(newMarker);
+					}
+				}
+				newMarker = L.marker(e.latlng, {draggable:'true'}, {opacity: 1}).addTo(mymap);
+				setMarker(e);
 				}
 
 
