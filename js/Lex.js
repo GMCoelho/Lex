@@ -24,7 +24,7 @@ textoalert = "<div class='alert alert-success alert-dismissible fade show' role=
 					$('#colab').alert();
 				}
 				else{
-textoalert = "<div class="alert alert-warning alert-dismissible fade show" role="alert"><br/><button type="button" class="close" data-dismiss="alert" aria-label="Close"><br/><span aria-hidden="true">&times;</span><br/></button><br/><strong>Atenção:</strong> é necessário selecionar a localização do posto no mapa.<br/></div>";
+textoalert = "<div class='alert alert-warning alert-dismissible fade show' role='alert'><br/><button type='button' class='close' data-dismiss='alert' aria-label='Close'><br/><span aria-hidden='true'>&times;</span><br/></button><br/><strong>Atenção:</strong> é necessário selecionar a localização do posto no mapa.<br/></div>";
 					alertid.innerHTML = textoalert;
 					$('#colab').alert();
 				}
