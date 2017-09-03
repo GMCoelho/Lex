@@ -57,8 +57,12 @@ mymap.on('click',
 			setInterval(function() {
 				mymap.on('click', onMapClick);
 			}, 10);
-			abreModalCadastro(pos);
-			//bindtooltip...
+			var newpos = newMarker.getLatLng();
+			abreModalCadastro(newpos);
+			newMarker.bindTooltip(
+				"Latitude: " + newpos.lat.toString() +
+				" Longitude: " + newpos.lng.toString()
+				).openTooltip();
 		});
 		if(staticMarker == true){
 			newMarker.addTo(mymap);
