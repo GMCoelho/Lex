@@ -57,12 +57,8 @@ mymap.on('click',
 			setInterval(function() {
 				mymap.on('click', onMapClick);
 			}, 10);
-			console.log("DRAGEND E: " + e.latlng + e.toString());
-			abreModalCadastro(e);
-			newMarker.bindTooltip(
-			"Latitude: " + e.latlng.lat.toString() +
-			" Longitude: " + e.latlng.lng.toString()
-			).openTooltip();
+			abreModalCadastro(pos);
+			//bindtooltip...
 		});
 		if(staticMarker == true){
 			newMarker.addTo(mymap);
@@ -83,11 +79,10 @@ function setMarker(e){
 		" Longitude: " + e.latlng.lng.toString()
 		).openTooltip();
 	conf = true;
-	abreModalCadastro(e);
+	abreModalCadastro(e.latlng);
 }
-function abreModalCadastro(e) {
+function abreModalCadastro(pos) {
 	var tituloModal = document.getElementById("PostoLoc");
-	var locAux = e.latlng;
-	tituloModal.innerHTML = "Posto em: </p>Lat: " + locAux.lat.toString() + "</br>Lon: " + locAux.lng.toString();
+	tituloModal.innerHTML = "Posto em: </p>Lat: " + pos.lat.toString() + "</br>Lon: " + pos.lng.toString();
 	$('#meuModal').modal('show');
 }
