@@ -57,6 +57,7 @@ mymap.on('click',
 			setInterval(function() {
 				mymap.on('click', onMapClick);
 			}, 10);
+			console.log("DRAGEND E: " + e);
 			abreModalCadastro(e);
 			newMarker.bindTooltip(
 			"Latitude: " + e.latlng.lat.toString() +
