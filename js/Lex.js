@@ -6,7 +6,7 @@ $(document).ready(function(){
 				L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
 					maxZoom: 18
 				}).addTo(mymap);
-}
+});
 	var cont = 0;
 	var newMarker = null;
 	var markers = new Array();
