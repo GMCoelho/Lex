@@ -42,22 +42,24 @@ mymap.on('click',
 	function onMapClick(e){
 	//Função para checar posto próximo... THEN:
 	staticMarker = true;
-		newMarker.on('dragstart', function(e){
-			mymap.off('click', onMapClick);
-			newMarker.setOpacity(1);
-			conf = true;
-			staticMarker = false;
-		});
-		newMarker.on('dragend', function(e){
-			setTimeout(function() {
-        			mymap.on('click', onMapClick);
-      			}, 10);
-			newMarker.bindTooltip(
-			"Latitude: " + e.latlng.lat.toString() +
-			" Longitude: " + e.latlng.lng.toString()
-			).openTooltip();
-			abreModalCadastro(e);
-		});
+		if(newMarker != null){
+			newMarker.on('dragstart', function(e){
+				mymap.off('click', onMapClick);
+				newMarker.setOpacity(1);
+				conf = true;
+				staticMarker = false;
+			});
+			newMarker.on('dragend', function(e){
+				setTimeout(function() {
+					mymap.on('click', onMapClick);
+				}, 10);
+				newMarker.bindTooltip(
+				"Latitude: " + e.latlng.lat.toString() +
+				" Longitude: " + e.latlng.lng.toString()
+				).openTooltip();
+				abreModalCadastro(e);
+			});
+		}
 		if(staticMarker == true){
 			if(newMarker != null){
 				mymap.removeLayer(newMarker);
