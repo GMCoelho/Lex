@@ -48,7 +48,6 @@ mymap.on('click',
 	newMarker = L.marker(pos, {draggable:'true'}, {opacity: 1});
 	staticMarker = true;
 		newMarker.on('dragstart', function(e){
-			newMarker.setOpacity(1);
 			conf = true;
 			staticMarker = false;
 			mymap.off('click', onMapClick);
@@ -57,6 +56,7 @@ mymap.on('click',
 			setInterval(function() {
 				mymap.on('click', onMapClick);
 			}, 10);
+			newMarker.setOpacity(1);
 			var newpos = newMarker.getLatLng();
 			abreModalCadastro(newpos);
 			newMarker.bindTooltip(
