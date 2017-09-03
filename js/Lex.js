@@ -41,7 +41,7 @@ $(document).ready(function(){
 				}
 				newMarker = L.marker(e.latlng, {draggable:'true'}, {opacity: 1}).addTo(mymap);
 				setMarker(e);
-				newMarker.on('dragend', setMarker(e));
+				newMarker.on('dragend', setMarker);
 				}
 
 
