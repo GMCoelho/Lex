@@ -21,12 +21,7 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 //textoalert = "<div class='alert alert-success alert-dismissible fade show' role='alert'><br/><button type='button' class='close' data-dismiss='alert' aria-label='Close'><br/><span aria-hidden='true'>&times;</span><br/></button><br/><strong>Obrigado por colaborar!</strong> Sua contribuição será validada em breve.<br/></div>";
 					
 					//alertid.innerHTML = textoalert;
-					$('#colab').append("<div class='alert alert-success alert-dismissible fade show' role='alert'><br/>
-							   <button type='button' class='close' data-dismiss='alert' aria-label='Close'><br/>
-							   	<span aria-hidden='true'>&times;</span><br/>
-							   </button><br/>
-							   <strong>Obrigado por colaborar!</strong> Sua contribuição será validada em breve.<br/>
-							   </div>");
+					$('#colab').append("<div class='alert alert-success alert-dismissible fade show' role='alert'><br/><button type='button' class='close' data-dismiss='alert' aria-label='Close'><br/><span aria-hidden='true'>&times;</span><br/></button><br/><strong>Obrigado por colaborar!</strong> Sua contribuição será validada em breve.<br/></div>");
 				}
 				else{
 textoalert = "<div class='alert alert-warning alert-dismissible fade show' role='alert'><br/><button type='button' class='close' data-dismiss='alert' aria-label='Close'><br/><span aria-hidden='true'>&times;</span><br/></button><br/><strong>Atenção:</strong> é necessário selecionar a localização do posto no mapa.<br/></div>";
