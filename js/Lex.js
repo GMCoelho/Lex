@@ -1,17 +1,22 @@
-var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
-			L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
-				maxZoom: 18
-			}).addTo(mymap);
-			
-			var cont = 0;
-			var newMarker = null;
-			var markers = new Array();
-			var conf = false;
+$(document).ready(function(){
+	$("#colab-scs").css("visibility", "hidden");
+	$("#colab-wrn").css("visibility", "hidden");
 
-			$('#editarLoc').on('click', function(){
-				conf = false;
-				newMarker.setOpacity(0.5);
-			});
+	var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
+				L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
+					maxZoom: 18
+				}).addTo(mymap);
+}
+	var cont = 0;
+	var newMarker = null;
+	var markers = new Array();
+	var conf = false;
+
+	$('#editarLoc').on('click', function(){
+		conf = false;
+		newMarker.setOpacity(0.5);
+	});
+
 			function cadastrar(){
 				$('#colab-wrn').hide();
 				$('#colab-scs').hide();
