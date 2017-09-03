@@ -40,13 +40,19 @@ $(document).ready(function(){
 					mymap.removeLayer(newMarker);
 				}
 				newMarker = L.marker(e.latlng, {draggable:'true'}, {opacity: 1}).addTo(mymap);
+				setMarker(e);
+				}
+
+newMarker.on('dragend', setMarker(e));
+
+			function setMarker(e){
 				newMarker.bindTooltip(
 					"Latitude: " + e.latlng.lat.toString() +
 					" Longitude: " + e.latlng.lng.toString()
 					).openTooltip();
 				conf = true;
 				abreModalCadastro(e);
-				}
+			}
 			function abreModalCadastro(e) {
 				var tituloModal = document.getElementById("PostoLoc");
 				var locAux = e.latlng;
