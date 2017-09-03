@@ -41,7 +41,14 @@ $(document).ready(function(){
 				}
 				newMarker = L.marker(e.latlng, {draggable:'true'}, {opacity: 1}).addTo(mymap);
 				setMarker(e);
-				newMarker.on('dragend', setMarker);
+					newMarker.on('draged', function(e){
+						newMarker.bindTooltip(
+						"Latitude: " + e.latlng.lat.toString() +
+						" Longitude: " + e.latlng.lng.toString()
+						).openTooltip();
+						conf = true;
+						abreModalCadastro(e);
+					});
 				}
 
 
