@@ -18,22 +18,22 @@ var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 				if(newMarker != null && conf == true){
 					mymap.removeLayer(newMarker);
 					
-textoalert = "<div class="alert alert-success alert-dismissible fade show" role="alert">\n
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n
-                    <span aria-hidden="true">&times;</span>\n
-                </button>\n
-                <strong>Obrigado por colaborar!</strong> Sua contribuição será validada em breve.\n
+textoalert = "<div class="alert alert-success alert-dismissible fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>Obrigado por colaborar!</strong> Sua contribuição será validada em breve.
             </div>"
 					
 					alertid.innerHTML = textoalert;
 					$(.alert).alert();
 				}
 				else{
-textoalert = "<div class="alert alert-warning alert-dismissible fade show" role="alert">\n
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n
-                    <span aria-hidden="true">&times;</span>\n
-                </button>\n
-                <strong>Atenção:</strong> é necessário selecionar a localização do posto no mapa.\n
+textoalert = "<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>Atenção:</strong> é necessário selecionar a localização do posto no mapa.
             </div>"
 					alertid.innerHTML = textoalert;
 					$(.alert).alert();
