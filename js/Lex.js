@@ -16,11 +16,14 @@ $(document).ready(function(){
 	var conf = false;
 	var staticMarker = true;
 
-	$('#editarLoc').on('click', function(){
-		conf = false;
-		newMarker.setOpacity(0.5);
-		$('#colab-tip').show();
-	});
+	$('#editarLoc').on('click', editar);
+	$('#modalClose').on('click', editar);
+
+function editar(){
+	conf = false;
+	newMarker.setOpacity(0.5);
+	$('#colab-tip').show();
+}
 
 			function cadastrar(){
 				$('#colab-wrn').hide();
@@ -39,7 +42,7 @@ $(document).ready(function(){
 				//Função para checar posto próximo... THEN:
 				if(newMarker != null){
 					staticMarker = true;
-					newMarker.on('drag', function(e){
+					newMarker.on('move', function(e){
 						newMarker.bindTooltip(
 						"Latitude: " + e.latlng.lat.toString() +
 						" Longitude: " + e.latlng.lng.toString()
