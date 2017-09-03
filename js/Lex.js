@@ -23,7 +23,7 @@ textoalert = "<div class="alert alert-success alert-dismissible fade show" role=
                     "<span aria-hidden="true">&times;</span>" +
                 "</button>" +
                 "<strong>Obrigado por colaborar!</strong> Sua contribuição será validada em breve." +
-            "</div>"
+            "</div>";
 					
 					alertid.innerHTML = textoalert;
 					$(.alert).alert();
@@ -34,7 +34,7 @@ textoalert = "<div class="alert alert-warning alert-dismissible fade show" role=
                     "<span aria-hidden="true">&times;</span>" +
                 "</button>" +
                 "<strong>Atenção:</strong> é necessário selecionar a localização do posto no mapa." +
-            "</div>"
+            "</div>";
 					alertid.innerHTML = textoalert;
 					$(.alert).alert();
 				}
