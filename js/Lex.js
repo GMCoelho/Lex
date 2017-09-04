@@ -26,7 +26,7 @@ function editar(){
 			  "showDuration": "300",
 			  "hideDuration": "1000",
 			  "timeOut": "-1",
-			  "extendedTimeOut": "1000",
+			  "extendedTimeOut": "-1",
 			  "showEasing": "swing",
 			  "hideEasing": "linear",
 			  "showMethod": "fadeIn",
@@ -49,7 +49,7 @@ function cadastrar(){
 				  "showDuration": "300",
 				  "hideDuration": "1000",
 				  "timeOut": "-1",
-				  "extendedTimeOut": "1000",
+				  "extendedTimeOut": "-1",
 				  "showEasing": "swing",
 				  "hideEasing": "linear",
 				  "showMethod": "fadeIn",
@@ -70,13 +70,13 @@ function cadastrar(){
 				  "showDuration": "300",
 				  "hideDuration": "1000",
 				  "timeOut": "-1",
-				  "extendedTimeOut": "1000",
+				  "extendedTimeOut": "-1",
 				  "showEasing": "swing",
 				  "hideEasing": "linear",
 				  "showMethod": "fadeIn",
 				  "hideMethod": "fadeOut"
 				}
-		toastr.success(" você precisa selecionar a localização do posto no mapa.", "Atenção:");
+		toastr.warning(" você precisa selecionar a localização do posto no mapa.", "Atenção:");
 	}
 	conf = false;
 }
