@@ -131,6 +131,6 @@ function setMarker(e){
 }
 function abreModalCadastro(pos) {
 	var tituloModal = document.getElementById("PostoLoc");
-	tituloModal.innerHTML = "Posto em: </p>Lat: " + pos.lat.toString() + "</br>Lon: " + pos.lng.toString();
+	tituloModal.innerHTML = "Localização: <br/>Lat: " + pos.lat.toString() + "</br>Lon: " + pos.lng.toString();
 	$('#meuModal').modal('show');
 }
