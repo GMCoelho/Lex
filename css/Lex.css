@@ -84,27 +84,24 @@
     background-color: midnightblue !important;
 }
 
-.btn{
+.botaoConf{
 	border: 2px outset transparent !important;
-	border-color: midnightblue !important;
-}
-
-.btn-success{
 	background-color: #589c59 !important;
 	border-color: midnightblue !important;
 }
 
-.btn-success:hover, .btn-success:active, .btn-success:focus{
+.botaoConf:hover, .botaConf:active, .botaConf:focus{
 	background-color: midnightblue !important;
-	border-color: #589c59 !important;
+	border-color: #589c59 !important;	
 }
 
-.btn-warning{
-    background-color: #b58d32 !important;
-    border-color: midnightblue !important;	
+.botaoEdit{
+	border: 2px outset transparent !important;
+	background-color: #b58d32 !important;
+	border-color: midnightblue !important;
 }
 
-.btn-warning:hover, .btn-warning:active, .btn-warning:focus{
-    background-color: midnightblue !important;
-    border-color: #b58d32 !important;	
+.botaoEdit:hover, botaoEdit:active, botaoEdit:focus{
+	background-color: midnightblue !important;
+	border-color: #b58d32 !important;
 }
