@@ -89,6 +89,8 @@
 	border: 2px outset transparent !important;
 	background-color: #589c59 !important;
 	border-color: midnightblue !important;
+	padding: 5px 33px 8px 30px !important;
+	border-radius: 4px 4px 4px 30px !important;
 }
 
 .botaoConf:hover, .botaConf:active, .botaConf:focus{
@@ -101,6 +103,8 @@
 	border: 2px outset transparent !important;
 	background-color: #b58d32 !important;
 	border-color: midnightblue !important;
+	padding: 5px 33px 8px 30px !important;
+	border-radius: 4px 4px 30px 4px !important;
 }
 
 .botaoEdit:hover, botaoEdit:active, botaoEdit:focus{
