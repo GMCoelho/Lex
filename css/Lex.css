@@ -2,7 +2,9 @@
 	height: 500px;
 }
 
-#toast-container{
+#toast-container div{
+	padding: 10px 15px 15px 50px !important;
+	border-radius: 5px 5px 35px 35px !important;
 	opacity: 1.0 !important;
 }
 
