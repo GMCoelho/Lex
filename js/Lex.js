@@ -1,21 +1,16 @@
-$(document).ready(function(){
-	$('#colab-wrn').hide();
-	$('#colab-scs').hide();
-	$('#colab-tip').hide();
-});
-	//Adiciona o mapa na página no id 'mapa' informado
-	var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
-	//Carrega a tile do mapa no objeto 'mymap'
-	L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
-		maxZoom: 18
-	}).addTo(mymap);
+//Adiciona o mapa na página no id 'mapa' informado
+var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
+//Carrega a tile do mapa no objeto 'mymap'
+L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
+	maxZoom: 18
+}).addTo(mymap);
 
-	var newMarker;
-	var conf = false;
-	var staticMarker = true;
+var newMarker;
+var conf = false;
+var staticMarker = true;
 
-	$('#editarLoc').on('click', editar);
-	$('#modalClose').on('click', editar);
+$('#editarLoc').on('click', editar);
+$('#modalClose').on('click', editar);
 
 function editar(){
 	conf = false;
@@ -30,7 +25,7 @@ function editar(){
 			  "onclick": null,
 			  "showDuration": "300",
 			  "hideDuration": "1000",
-			  "timeOut": "5000",
+			  "timeOut": "-1",
 			  "extendedTimeOut": "1000",
 			  "showEasing": "swing",
 			  "hideEasing": "linear",
@@ -41,15 +36,47 @@ function editar(){
 }
 
 function cadastrar(){
-	$('#colab-wrn').hide();
-	$('#colab-scs').hide();
-	$('#colab-tip').hide();
 	if(newMarker != null && conf == true){
 		mymap.removeLayer(newMarker);
-		$('#colab-scs').show();
+		toastr.options = {
+				  "closeButton": false,
+				  "debug": true,
+				  "newestOnTop": true,
+				  "progressBar": false,
+				  "positionClass": "toast-top-center",
+				  "preventDuplicates": false,
+				  "onclick": null,
+				  "showDuration": "300",
+				  "hideDuration": "1000",
+				  "timeOut": "-1",
+				  "extendedTimeOut": "1000",
+				  "showEasing": "swing",
+				  "hideEasing": "linear",
+				  "showMethod": "fadeIn",
+				  "hideMethod": "fadeOut"
+				}
+		toastr.success("Sua colaboração sera validada e aparecerá no mapa em breve", "Obrigado!");
 	}
 	else{
-		$('#colab-wrn').show();
+		
+		toastr.options = {
+				  "closeButton": false,
+				  "debug": true,
+				  "newestOnTop": true,
+				  "progressBar": false,
+				  "positionClass": "toast-top-center",
+				  "preventDuplicates": false,
+				  "onclick": null,
+				  "showDuration": "300",
+				  "hideDuration": "1000",
+				  "timeOut": "-1",
+				  "extendedTimeOut": "1000",
+				  "showEasing": "swing",
+				  "hideEasing": "linear",
+				  "showMethod": "fadeIn",
+				  "hideMethod": "fadeOut"
+				}
+		toastr.success(" você precisa selecionar a localização do posto no mapa.", "Atenção:");
 	}
 	conf = false;
 }
