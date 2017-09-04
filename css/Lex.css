@@ -2,6 +2,10 @@
 	height: 500px;
 }
 
+#toastr-container{
+	opacity: 1 !important;
+}
+
 @media screen and (min-width: 769px){
 	.posicao{
 	    padding-top: 3px;
