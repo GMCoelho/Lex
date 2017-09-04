@@ -2,8 +2,8 @@
 	height: 500px;
 }
 
-#toastr-container{
-	opacity: 1 !important;
+#toast-container{
+	opacity: 1.0 !important;
 }
 
 @media screen and (min-width: 769px){
