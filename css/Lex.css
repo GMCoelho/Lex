@@ -83,3 +83,27 @@
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.75);
     background-color: midnightblue !important;
 }
+
+.btn-success{
+	background-color: #589c59 !important;
+	border-color: midnightblue !important;
+}
+
+.btn-success:hover{
+	background-color: midnightblue !important;
+	border-color: #589c59 !important;
+}
+
+.btn-warning{
+    background-color: #b58d32 !important;
+    border-color: midnightblue !important;	
+}
+
+.btn-warning:hover{
+    background-color: midnightblue !important;
+    border-color: #b58d32 !important;	
+}
+
+.btn{
+	border: 2px ridge transparent !important;
+}
