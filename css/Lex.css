@@ -85,7 +85,7 @@
 }
 
 .btn{
-	border: 2px ridge transparent !important;
+	border: 2px outset transparent !important;
 	border-color: midnightblue !important;
 }
 
@@ -94,7 +94,7 @@
 	border-color: midnightblue !important;
 }
 
-.btn-success:hover{
+.btn-success:hover, .btn-success:active, .btn-success:focus{
 	background-color: midnightblue !important;
 	border-color: #589c59 !important;
 }
@@ -104,7 +104,7 @@
     border-color: midnightblue !important;	
 }
 
-.btn-warning:hover{
+.btn-warning:hover, .btn-warning:active, .btn-warning:focus{
     background-color: midnightblue !important;
     border-color: #b58d32 !important;	
 }
