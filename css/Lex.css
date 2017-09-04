@@ -84,6 +84,11 @@
     background-color: midnightblue !important;
 }
 
+.btn{
+	border: 2px ridge transparent !important;
+	border-color: midnightblue !important;
+}
+
 .btn-success{
 	background-color: #589c59 !important;
 	border-color: midnightblue !important;
@@ -102,8 +107,4 @@
 .btn-warning:hover{
     background-color: midnightblue !important;
     border-color: #b58d32 !important;	
-}
-
-.btn{
-	border: 2px ridge transparent !important;
 }
