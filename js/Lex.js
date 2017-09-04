@@ -20,7 +20,24 @@ $(document).ready(function(){
 function editar(){
 	conf = false;
 	newMarker.setOpacity(0.5);
-	$('#colab-tip').show();
+	toastr.options = {
+			  "closeButton": false,
+			  "debug": true,
+			  "newestOnTop": true,
+			  "progressBar": false,
+			  "positionClass": "toast-top-center",
+			  "preventDuplicates": false,
+			  "onclick": null,
+			  "showDuration": "300",
+			  "hideDuration": "1000",
+			  "timeOut": "5000",
+			  "extendedTimeOut": "1000",
+			  "showEasing": "swing",
+			  "hideEasing": "linear",
+			  "showMethod": "fadeIn",
+			  "hideMethod": "fadeOut"
+			}
+	toastr.info("para editar a localização você pode arrastar o marcador antigo ou selecionar outro local!", "Dica: ");
 }
 
 function cadastrar(){
