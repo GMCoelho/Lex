@@ -91,7 +91,7 @@
 	border-color: midnightblue !important;
 	padding: 5px 5% 8px 5% !important;
 	border-radius: 4px 4px 4px 30px !important;
-	width: 50%;
+	width: 58.75%;
 }
 
 .botaoConf:hover, .botaConf:active, .botaConf:focus{
@@ -104,9 +104,9 @@
 	border: 2px outset transparent !important;
 	background-color: #b58d32 !important;
 	border-color: midnightblue !important;
-	padding: 5px 5% 8px 5%;
+	padding: 5px 5% 8px 4%;
 	border-radius: 4px 4px 30px 4px !important;
-	width: 40%;
+	width: 41%;
 }
 
 .botaoEdit:hover, botaoEdit:active, botaoEdit:focus{
