@@ -85,6 +85,7 @@
 }
 
 .botaoConf{
+	color: #FFF !important;
 	border: 2px outset transparent !important;
 	background-color: #589c59 !important;
 	border-color: midnightblue !important;
@@ -96,6 +97,7 @@
 }
 
 .botaoEdit{
+	color: #FFF !important;
 	border: 2px outset transparent !important;
 	background-color: #b58d32 !important;
 	border-color: midnightblue !important;
