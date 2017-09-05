@@ -8,6 +8,18 @@
 	opacity: 1.0 !important;
 }
 
+.toast-info{
+	background-color: rgb(47, 125, 180) !important;
+}
+
+.toast-warning{
+	background-color: #f8c406 !important;
+}
+
+.toast-success{
+	background-color: #51a37d !important;
+}
+
 @media screen and (min-width: 769px){
 	.posicao{
 	    padding-top: 3px;
