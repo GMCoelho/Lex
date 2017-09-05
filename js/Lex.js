@@ -11,7 +11,25 @@ var staticMarker = true;
 
 $("#meuModal").on('hide.bs.modal', function () {
 	if(conf == false){
-		newMarker.setOpacity(0.5);	
+		newMarker.setOpacity(0.5);
+		toastr.options = {
+			  "closeButton": false,
+			  "debug": true,
+			  "newestOnTop": true,
+			  "progressBar": false,
+			  "positionClass": "toast-top-center",
+			  "preventDuplicates": false,
+			  "onclick": null,
+			  "showDuration": "300",
+			  "hideDuration": "1000",
+			  "timeOut": "5000",
+			  "extendedTimeOut": "5000",
+			  "showEasing": "swing",
+			  "hideEasing": "linear",
+			  "showMethod": "fadeIn",
+			  "hideMethod": "fadeOut"
+			}
+		toastr.warning("Você não confirmou a localização do posto. Clique aqui para confirmar.", "Atenção: ");
 	}
 });
 $("#confLoc").on('click', function (){
@@ -32,7 +50,7 @@ function editar(){
 			  "progressBar": false,
 			  "positionClass": "toast-top-center",
 			  "preventDuplicates": false,
-			  "onclick": null,
+			  "onclick": abreModalCadastro(newMarker.getlatlng()),
 			  "showDuration": "300",
 			  "hideDuration": "1000",
 			  "timeOut": "5000",
