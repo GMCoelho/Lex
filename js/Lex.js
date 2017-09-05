@@ -9,13 +9,17 @@ var newMarker;
 var conf = false;
 var staticMarker = true;
 
-$('#editarLoc').on('click', editar);
-$('#modalClose').on('click', editar);
 $("#meuModal").on('hide.bs.modal', function () {
 	if(conf == false){
 		newMarker.setOpacity(0.5);	
 	}
 });
+$("#confLoc").on('click', function{
+	conf = true;
+	newMarker.setOpacity(1);
+});
+$('#editarLoc').on('click', editar);
+$('#modalClose').on('click', editar);
 
 function editar(){
 	conf = false;
