@@ -14,7 +14,7 @@ $("#meuModal").on('hide.bs.modal', function () {
 		newMarker.setOpacity(0.5);	
 	}
 });
-$("#confLoc").on('click', function{
+$("#confLoc").on('click', function(){
 	conf = true;
 	newMarker.setOpacity(1);
 });
