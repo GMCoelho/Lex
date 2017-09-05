@@ -11,6 +11,11 @@ var staticMarker = true;
 
 $('#editarLoc').on('click', editar);
 $('#modalClose').on('click', editar);
+$("#meuModal").on('hide.bs.modal', function () {
+	if(conf == false){
+		newMarker.setOpacity(0.5);	
+	}
+}
 
 function editar(){
 	conf = false;
@@ -48,8 +53,8 @@ function cadastrar(){
 				  "onclick": null,
 				  "showDuration": "300",
 				  "hideDuration": "1000",
-				  "timeOut": "-1",
-				  "extendedTimeOut": "-1",
+				  "timeOut": "5000",
+				  "extendedTimeOut": "5000",
 				  "showEasing": "swing",
 				  "hideEasing": "linear",
 				  "showMethod": "fadeIn",
@@ -69,8 +74,8 @@ function cadastrar(){
 				  "onclick": null,
 				  "showDuration": "300",
 				  "hideDuration": "1000",
-				  "timeOut": "-1",
-				  "extendedTimeOut": "-1",
+				  "timeOut": "5000",
+				  "extendedTimeOut": "5000",
 				  "showEasing": "swing",
 				  "hideEasing": "linear",
 				  "showMethod": "fadeIn",
@@ -94,6 +99,7 @@ mymap.on('click',
 		newMarker.on('dragstart', function(e){
 			conf = true;
 			staticMarker = false;
+			newMarker.setOpacity(0.5);
 			mymap.off('click', onMapClick);
 		});
 		newMarker.on('dragend', function(e){
