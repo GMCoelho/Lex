@@ -14,15 +14,16 @@ $("#meuModal").on('hide.bs.modal', function () {
 		newMarker.setOpacity(0.5);	
 	}
 });
-$("#confLoc").on('click', function(){
+$("#confLoc").on('click', function (){
 	conf = true;
+	$('#meuModal').modal('hide');
 	newMarker.setOpacity(1);
 });
 $('#editarLoc').on('click', editar);
-$('#modalClose').on('click', editar);
 
 function editar(){
 	conf = false;
+	$('#meuModal').modal('hide');
 	newMarker.setOpacity(0.5);
 	toastr.options = {
 			  "closeButton": false,
@@ -136,7 +137,6 @@ function setMarker(e){
 		"Latitude: " + e.latlng.lat.toString() +
 		" Longitude: " + e.latlng.lng.toString()
 		).openTooltip();
-	conf = true;
 	abreModalCadastro(e.latlng);
 }
 function abreModalCadastro(pos) {
