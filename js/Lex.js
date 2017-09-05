@@ -15,7 +15,7 @@ $("#meuModal").on('hide.bs.modal', function () {
 	if(conf == false){
 		newMarker.setOpacity(0.5);	
 	}
-}
+});
 
 function editar(){
 	conf = false;
