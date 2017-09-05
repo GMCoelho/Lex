@@ -95,7 +95,7 @@
 }
 
 .botaoConf:hover, .botaConf:active, .botaConf:focus{
-	background-color: midnightblue !important;
+	background-color: rgba(88, 156, 89, 0.6) !important;
 	border-color: #589c59 !important;	
 }
 
@@ -110,7 +110,7 @@
 }
 
 .botaoEdit:hover, botaoEdit:active, botaoEdit:focus{
-	background-color: midnightblue !important;
+	background-color: rgba(181, 141, 50, 0.6) !important;
 	border-color: #b58d32 !important;
 }
 
