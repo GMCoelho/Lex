@@ -10,7 +10,7 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var newMarker = L.marker([-20.35199, -40.29699], {draggable:'true'}, {opacity: 0});
 var conf = false;
 var staticMarker = true;
-var pos = [-20.35199, -40.29699];
+var pos = newMarker.getLatLng();
 
 $("#meuModal").on('hide.bs.modal', function () {
 	if(conf == false){
@@ -161,7 +161,7 @@ function setMarker(e){
 	pos = e.latlng;
 	abreModalCadastro(pos);
 }
-function abreModalCadastro(mdPos) {
+function abreModalCadastro(var mdPos) {
 	if(mdPos == null){
 		mdPos = pos;
 	}
