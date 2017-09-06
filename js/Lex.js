@@ -29,11 +29,13 @@ $("#meuModal").on('hide.bs.modal', function () {
 			  "showMethod": "fadeIn",
 			  "hideMethod": "fadeOut"
 			}
-		toastr.warning("Você não confirmou a localização do posto. Clique aqui para confirmar.", "Atenção: ");
+		var x = toastr.warning("Você não confirmou a localização do posto. Clique aqui para confirmar.", "Atenção: ");
+		$(x.el).click(function(){
+			abreModalCadastro(newMarker.getlatlng());
+		});
 	}
 });
-var x = toastr.warning("Você não confirmou a localização do posto. Clique aqui para confirmar.", "Atenção: ");
-$(x.el).click(abreModalCadastro(newMarker.getlatlng()));
+
 $("#confLoc").on('click', function (){
 	conf = true;
 	$('#meuModal').modal('hide');
