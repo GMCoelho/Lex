@@ -1,18 +1,19 @@
 //Adiciona o mapa na página no id 'mapa' informado
 var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 //Carrega a tile do mapa no objeto 'mymap'
-L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
 	maxZoom: 18
 }).addTo(mymap);
 
-//http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', << MORREU
+//'http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', << MORREU 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 
 var newMarker;
 var conf = false;
 var staticMarker = true;
+var edit = false;
 
 $("#meuModal").on('hide.bs.modal', function () {
-	if(conf == false){
+	if(conf == false && edit == false){
 		newMarker.setOpacity(0.5);
 		toastr.options = {
 			  "closeButton": false,
@@ -37,6 +38,7 @@ $("#meuModal").on('hide.bs.modal', function () {
 
 $("#confLoc").on('click', function (){
 	conf = true;
+	edit = false;
 	$('#meuModal').modal('hide');
 	newMarker.setOpacity(1);
 });
@@ -45,6 +47,7 @@ $('#editarLoc').on('click', editar);
 
 function editar(){
 	conf = false;
+	edit = true;
 	$('#meuModal').modal('hide');
 	newMarker.setOpacity(0.5);
 	toastr.options = {
@@ -164,4 +167,5 @@ function abreModalCadastro(pos) {
 	var tituloModal = document.getElementById("PostoLoc");
 	tituloModal.innerHTML = "Localização: <br/>Lat: " + pos.lat.toString() + "</br>Lon: " + pos.lng.toString();
 	$('#meuModal').modal('show');
+	edit = false;
 }
