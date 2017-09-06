@@ -7,10 +7,10 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', << MORREU
 
-var newMarker = L.marker([-20.35199, -40.29699], {draggable:'true'}, {opacity: 0});
+var newMarker;
 var conf = false;
 var staticMarker = true;
-var pos = newMarker.getLatLng();
+var pos;
 
 $("#meuModal").on('hide.bs.modal', function () {
 	if(conf == false){
@@ -32,10 +32,9 @@ $("#meuModal").on('hide.bs.modal', function () {
 			  "showMethod": "fadeIn",
 			  "hideMethod": "fadeOut"
 			}
-		toastr["warning"]("Você não confirmou a localização do posto. <br/><a id='confToast'>Clique aqui</a> para confirmar.", "Atenção:")
+		toastr["warning"]("Você não confirmou a localização do posto. Clique novamente no mapa para confirmar.", "Atenção:")
 	}
 });
-$("#confToast").on('click', abreModalCadastro(null));
 $("#confLoc").on('click', function (){
 	conf = true;
 	$('#meuModal').modal('hide');
@@ -161,11 +160,8 @@ function setMarker(e){
 	pos = e.latlng;
 	abreModalCadastro(pos);
 }
-function abreModalCadastro(mdPos) {
-	if(mdPos == null){
-		mdPos = pos;
-	}
+function abreModalCadastro(pos) {
 	var tituloModal = document.getElementById("PostoLoc");
-	tituloModal.innerHTML = "Localização: <br/>Lat: " + mdPos.lat.toString() + "</br>Lon: " + mdPos.lng.toString();
+	tituloModal.innerHTML = "Localização: <br/>Lat: " + pos.lat.toString() + "</br>Lon: " + pos.lng.toString();
 	$('#meuModal').modal('show');
 }
