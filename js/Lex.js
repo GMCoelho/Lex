@@ -33,7 +33,7 @@ $("#meuModal").on('hide.bs.modal', function () {
 		x = toastr.warning("Você não confirmou a localização do posto. Clique aqui para confirmar.", "Atenção: ");
 	}
 });
-$(x.el).click(function(){
+$(x).click(function(){
 	abreModalCadastro(newMarker.getlatlng());
 });
 
