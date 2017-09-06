@@ -10,6 +10,7 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var newMarker = L.marker([-20.35199, -40.29699], {draggable:'true'}, {opacity: 0});
 var conf = false;
 var staticMarker = true;
+var pos = [-20.35199, -40.29699];
 
 $("#meuModal").on('hide.bs.modal', function () {
 	if(conf == false){
@@ -34,7 +35,7 @@ $("#meuModal").on('hide.bs.modal', function () {
 		toastr["warning"]("Você não confirmou a localização do posto. <br/><a id='confToast'>Clique aqui</a> para confirmar.", "Atenção:")
 	}
 });
-$("#confToast").on('click', abreModalCadastro(newMarker.getLatLng()));
+$("#confToast").on('click', abreModalCadastro(pos);
 $("#confLoc").on('click', function (){
 	conf = true;
 	$('#meuModal').modal('hide');
@@ -137,6 +138,7 @@ mymap.on('click',
 				"Latitude: " + newpos.lat.toString() +
 				" Longitude: " + newpos.lng.toString()
 				).openTooltip();
+			pos = newpos;
 		});
 		if(staticMarker == true){
 			newMarker.addTo(mymap);
@@ -156,7 +158,8 @@ function setMarker(e){
 		"Latitude: " + e.latlng.lat.toString() +
 		" Longitude: " + e.latlng.lng.toString()
 		).openTooltip();
-	abreModalCadastro(e.latlng);
+	pos = e.latlng;
+	abreModalCadastro(pos);
 }
 function abreModalCadastro(pos) {
 	var tituloModal = document.getElementById("PostoLoc");
