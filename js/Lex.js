@@ -19,7 +19,7 @@ $("#meuModal").on('hide.bs.modal', function () {
 			  "progressBar": false,
 			  "positionClass": "toast-top-center",
 			  "preventDuplicates": false,
-			  "onclick": null,
+			  "onclick": function(){abreModalCadastro(newMarker.getlatlng());},
 			  "showDuration": "300",
 			  "hideDuration": "1000",
 			  "timeOut": "5000",
