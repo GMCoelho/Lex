@@ -1,9 +1,11 @@
 //Adiciona o mapa na página no id 'mapa' informado
 var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
 //Carrega a tile do mapa no objeto 'mymap'
-L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 18
 }).addTo(mymap);
+
+//http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', << MORREU
 
 var newMarker = L.marker([-20.35199, -40.29699], {draggable:'true'}, {opacity: 0});
 var conf = false;
