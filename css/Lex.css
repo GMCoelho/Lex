@@ -18,23 +18,23 @@
 
 @media screen and (min-width: 769px){
 	.posicao{
-	    padding-top: 3px;
-	    padding-bottom: 5px;
-	    text-align: center;
-	    font-family: 'Kanit', sans-serif;
-	    font-size: 30px;
-	    color: #FFFFFF;
-	    background-color: midnightblue;
-	    border-top: 3px solid;
-	    border-radius: 45px 45px 0 0;
-	    border-top-color: midnightblue;
-	    border-bottom-color: midnightblue;
-	    border-left: 1px solid;
-	    border-left-color: midnightblue;
-	    border-right: 1px solid;
-	    border-right-color: midnightblue;
-	    margin-bottom: 0px;
-	    margin-top: 10px;
+		padding-top: 3px;
+		padding-bottom: 5px;
+		text-align: center;
+		font-family: 'Kanit', sans-serif;
+		font-size: 30px;
+		color: #FFFFFF;
+		background-color: midnightblue;
+		border-top: 3px solid;
+		border-radius: 45px 45px 0 0;
+		border-top-color: midnightblue;
+		border-bottom-color: midnightblue;
+		border-left: 1px solid;
+		border-left-color: midnightblue;
+		border-right: 1px solid;
+		border-right-color: midnightblue;
+		margin-bottom: 0px;
+		margin-top: 10px;
 	}
 	#mapa{
 		height: 500px;
@@ -43,55 +43,79 @@
 
 @media screen and (max-width: 768px) and (orientation: portrait){
 	.posicao{
-	    padding-top: 3px;
-	    padding-bottom: 5px;
-	    padding-left: 25px;
-    	    padding-right: 25px;
-	    text-align: center;
-	    font-family: 'Kanit', sans-serif;
-	    font-size: 20px !important;
-	    color: #FFFFFF;
-	    background-color: midnightblue;
-	    border-top: 3px solid;
-	    border-radius: 45px 45px 0 0;
-	    border-top-color: midnightblue;
-	    border-bottom-color: midnightblue;
-	    border-left: 1px solid;
-	    border-left-color: midnightblue;
-	    border-right: 1px solid;
-	    border-right-color: midnightblue;
-	    margin-bottom: 0px;
-	    margin-top: 10px;
+		padding-top: 3px;
+		padding-bottom: 5px;
+		padding-left: 25px;
+		padding-right: 25px;
+		text-align: center;
+		font-family: 'Kanit', sans-serif;
+		font-size: 20px !important;
+		color: #FFFFFF;
+		background-color: midnightblue;
+		border-top: 3px solid;
+		border-radius: 45px 45px 0 0;
+		border-top-color: midnightblue;
+		border-bottom-color: midnightblue;
+		border-left: 1px solid;
+		border-left-color: midnightblue;
+		border-right: 1px solid;
+		border-right-color: midnightblue;
+		margin-bottom: 0px;
+		margin-top: 30px;
 	}
 	#mapa{
-		height: 400px;
+		height: 450px;
+	}
+	.botaoCadastrar{
+	    width: 100%;
+	    font-family: 'Kanit', sans-serif;
+	    font-size: larger;
+	    border: 0px;
+	    border-top: 3px !important;
+	    border-radius: 0px 0px 45px 45px;
+	    padding-top: 15px;
+	    paddinf-bottom: 15px;
+	    background-color: midnightblue;
+	    border-color: midnightblue;	
 	}
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape){
 	.posicao{
-	    padding-top: 3px;
-	    padding-bottom: 5px;
-	    padding-left: 25px;
-    	    padding-right: 25px;
-	    text-align: center;
-	    font-family: 'Kanit', sans-serif;
-	    font-size: 20px !important;
-	    color: #FFFFFF;
-	    background-color: midnightblue;
-	    border-top: 3px solid;
-	    border-radius: 45px 45px 0 0;
-	    border-top-color: midnightblue;
-	    border-bottom-color: midnightblue;
-	    border-left: 1px solid;
-	    border-left-color: midnightblue;
-	    border-right: 1px solid;
-	    border-right-color: midnightblue;
-	    margin-bottom: 0px;
-	    margin-top: 10px;
+		padding-top: 3px;
+		padding-bottom: 5px;
+		padding-left: 25px;
+		padding-right: 25px;
+		text-align: center;
+		font-family: 'Kanit', sans-serif;
+		font-size: 20px !important;
+		color: #FFFFFF;
+		background-color: midnightblue;
+		border-top: 3px solid;
+		border-radius: 45px 45px 0 0;
+		border-top-color: midnightblue;
+		border-bottom-color: midnightblue;
+		border-left: 1px solid;
+		border-left-color: midnightblue;
+		border-right: 1px solid;
+		border-right-color: midnightblue;
+		margin-bottom: 0px;
+		margin-top: 15px;
 	}
 	#mapa{
-		height: 300px;
+		height: 240px;
+	}
+	.botaoCadastrar{
+	    width: 100%;
+	    font-family: 'Kanit', sans-serif;
+	    font-size: inherit;
+	    border: 0px;
+	    border-top: 3px !important;
+	    border-radius: 0px 0px 45px 45px;
+	    padding-top: 15px;
+	    paddinf-bottom: 15px;
+	    background-color: midnightblue;
+	    border-color: midnightblue;	
 	}
 }
 
