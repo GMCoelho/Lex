@@ -39,6 +39,18 @@
 	#mapa{
 		height: 500px;
 	}
+	.botaoCadastrar{
+	    width: 100%;
+	    font-family: 'Kanit', sans-serif;
+	    font-size: larger;
+	    border: 0px;
+	    border-top: 3px !important;
+	    border-radius: 0px 0px 45px 45px;
+	    padding-top: 15px;
+	    padding-bottom: 15px;
+	    background-color: midnightblue;
+	    border-color: midnightblue;	
+	}
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait){
@@ -73,8 +85,8 @@
 	    border: 0px;
 	    border-top: 3px !important;
 	    border-radius: 0px 0px 45px 45px;
-	    padding-top: 15px;
-	    paddinf-bottom: 15px;
+	    padding-top: 10px;
+	    padding-bottom: 10px;
 	    background-color: midnightblue;
 	    border-color: midnightblue;	
 	}
@@ -108,12 +120,12 @@
 	.botaoCadastrar{
 	    width: 100%;
 	    font-family: 'Kanit', sans-serif;
-	    font-size: inherit;
+	    font-size: larger;
 	    border: 0px;
 	    border-top: 3px !important;
 	    border-radius: 0px 0px 45px 45px;
-	    padding-top: 15px;
-	    paddinf-bottom: 15px;
+	    padding-top: 10px;
+	    padding-bottom: 10px;
 	    background-color: midnightblue;
 	    border-color: midnightblue;	
 	}
@@ -129,19 +141,6 @@
     border-left: 2px solid;
     border-right: 2px solid;
     border-color: midnightblue;
-}
-
-.botaoCadastrar{
-    width: 100%;
-    font-family: 'Kanit', sans-serif;
-    font-size: x-large;
-    border: 0px;
-    border-top: 3px !important;
-    border-radius: 0px 0px 45px 45px;
-    padding-top: 15px;
-    paddinf-bottom: 15px;
-    background-color: midnightblue;
-    border-color: midnightblue;	
 }
 
 .botaoCadastrar:hover, .botaoCadastrar:active, .botaoCadastrar:focus{
