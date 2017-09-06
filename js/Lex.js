@@ -73,7 +73,7 @@ function cadastrar(){
 				  "progressBar": false,
 				  "positionClass": "toast-top-center",
 				  "preventDuplicates": false,
-				  "onclick": null,
+				  "onclick": "abreModalCadastro(newMarker.getlatlng())",
 				  "showDuration": "300",
 				  "hideDuration": "1000",
 				  "timeOut": "5000",
@@ -120,7 +120,6 @@ mymap.on('click',
 	newMarker = L.marker(pos, {draggable:'true'}, {opacity: 1});
 	staticMarker = true;
 		newMarker.on('dragstart', function(e){
-			conf = true;
 			staticMarker = false;
 			newMarker.setOpacity(0.5);
 			mymap.off('click', onMapClick);
