@@ -19,7 +19,7 @@ $("#meuModal").on('hide.bs.modal', function () {
 			  "progressBar": false,
 			  "positionClass": "toast-top-center",
 			  "preventDuplicates": false,
-			  "onclick": function(){alert("ALO CLICKOU!");},
+			  "onclick": null,
 			  "showDuration": "300",
 			  "hideDuration": "1000",
 			  "timeOut": "5000",
@@ -32,6 +32,8 @@ $("#meuModal").on('hide.bs.modal', function () {
 		toastr.warning("Você não confirmou a localização do posto. Clique aqui para confirmar.", "Atenção: ");
 	}
 });
+var x = toastr.warning("Você não confirmou a localização do posto. Clique aqui para confirmar.", "Atenção: ");
+$(x.el).click(abreModalCadastro(newMarker.getlatlng()));
 $("#confLoc").on('click', function (){
 	conf = true;
 	$('#meuModal').modal('hide');
