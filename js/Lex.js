@@ -29,7 +29,7 @@ $("#meuModal").on('hide.bs.modal', function () {
 			  "showMethod": "fadeIn",
 			  "hideMethod": "fadeOut"
 			}
-		toastr["warning"]("Você não confirmou a localização do posto. <br/><a id="confToast">Clique aqui</a> para confirmar.", "Atenção:")
+		toastr["warning"]("Você não confirmou a localização do posto. <br/><a id='confToast'>Clique aqui</a> para confirmar.", "Atenção:")
 	}
 });
 $("#confToast").on('click', abreModalCadastro(newMarker.getlatlng()));
