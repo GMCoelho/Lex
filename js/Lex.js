@@ -8,7 +8,6 @@ L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}'
 var newMarker = L.marker([-20.35199, -40.29699], {draggable:'true'}, {opacity: 0});
 var conf = false;
 var staticMarker = true;
-var pos = [-20.35199, -40.29699];
 
 $("#meuModal").on('hide.bs.modal', function () {
 	if(conf == false){
