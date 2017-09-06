@@ -25,7 +25,7 @@
 	    padding-top: 3px;
 	    padding-bottom: 5px;
 	    text-align: center;
-	    font-family: 'Josefin Sans', sans-serif;
+	    font-family: 'Kanit', sans-serif;
 	    font-size: 35px;
 	    color: #FFFFFF;
 	    background-color: midnightblue;
@@ -49,7 +49,7 @@
 	    padding-left: 25px;
     	    padding-right: 25px;
 	    text-align: center;
-	    font-family: 'Josefin Sans', sans-serif;
+	    font-family: 'Kanit', sans-serif;
 	    font-size: 25px !important;
 	    color: #FFFFFF;
 	    background-color: midnightblue;
@@ -80,7 +80,7 @@
 
 .botaoCadastrar{
     width: 100%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Kanit', sans-serif;
     font-size: x-large;
     border: 0px;
     border-top: 3px !important;
