@@ -5,9 +5,10 @@ L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}'
 	maxZoom: 18
 }).addTo(mymap);
 
-var newMarker = L.marker([-20.35199, -40.29699], {draggable:'true'}, {opacity: 0});
+var newMarker =;
 var conf = false;
 var staticMarker = true;
+var pos = [-20.35199, -40.29699];
 
 $("#meuModal").on('hide.bs.modal', function () {
 	if(conf == false){
@@ -32,7 +33,7 @@ $("#meuModal").on('hide.bs.modal', function () {
 		toastr["warning"]("Você não confirmou a localização do posto. <br/><a id='confToast'>Clique aqui</a> para confirmar.", "Atenção:")
 	}
 });
-$("#confToast").on('click', abreModalCadastro(newMarker.getlatlng()));
+$("#confToast").on('click', abreModalCadastro(newMarker.getLatLng()));
 $("#confLoc").on('click', function (){
 	conf = true;
 	$('#meuModal').modal('hide');
@@ -51,7 +52,7 @@ function editar(){
 			  "progressBar": false,
 			  "positionClass": "toast-top-center",
 			  "preventDuplicates": false,
-			  "onclick": abreModalCadastro(newMarker.getlatlng()),
+			  "onclick": abreModalCadastro(newMarker.getLatLng()),
 			  "showDuration": "300",
 			  "hideDuration": "1000",
 			  "timeOut": "5000",
@@ -74,7 +75,7 @@ function cadastrar(){
 				  "progressBar": false,
 				  "positionClass": "toast-top-center",
 				  "preventDuplicates": false,
-				  "onclick": "abreModalCadastro(newMarker.getlatlng())",
+				  "onclick": "abreModalCadastro(newMarker.getLatLng())",
 				  "showDuration": "300",
 				  "hideDuration": "1000",
 				  "timeOut": "5000",
@@ -113,7 +114,6 @@ function cadastrar(){
 mymap.on('click', 
 	function onMapClick(e){
 	var pos = e.latlng;
-	
 	if(mymap.hasLayer(newMarker)){
 		mymap.removeLayer(newMarker);
 	}
