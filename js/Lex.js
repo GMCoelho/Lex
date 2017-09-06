@@ -161,7 +161,7 @@ function setMarker(e){
 	pos = e.latlng;
 	abreModalCadastro(pos);
 }
-function abreModalCadastro(var mdPos) {
+function abreModalCadastro(mdPos) {
 	if(mdPos == null){
 		mdPos = pos;
 	}
