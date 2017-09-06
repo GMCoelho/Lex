@@ -1,5 +1,5 @@
 //Adiciona o mapa na página no id 'mapa' informado
-var mymap = L.map('mapa').setView([-20.35199, -40.29699], 16);
+var mymap = L.map('mapa', { zoomControl:false }).setView([-20.35199, -40.29699], 16);
 //Carrega a tile do mapa no objeto 'mymap'
 L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
 	maxZoom: 18
