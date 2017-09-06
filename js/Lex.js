@@ -35,7 +35,7 @@ $("#meuModal").on('hide.bs.modal', function () {
 		toastr["warning"]("Você não confirmou a localização do posto. <br/><a id='confToast'>Clique aqui</a> para confirmar.", "Atenção:")
 	}
 });
-$("#confToast").on('click', abreModalCadastro(e.latlng));
+$("#confToast").on('click', abreModalCadastro(null));
 $("#confLoc").on('click', function (){
 	conf = true;
 	$('#meuModal').modal('hide');
@@ -161,8 +161,11 @@ function setMarker(e){
 	pos = e.latlng;
 	abreModalCadastro(pos);
 }
-function abreModalCadastro(pos) {
+function abreModalCadastro(mdPos) {
+	if(mdPos == null){
+		mdPos = pos;
+	}
 	var tituloModal = document.getElementById("PostoLoc");
-	tituloModal.innerHTML = "Localização: <br/>Lat: " + pos.lat.toString() + "</br>Lon: " + pos.lng.toString();
+	tituloModal.innerHTML = "Localização: <br/>Lat: " + mdPos.lat.toString() + "</br>Lon: " + mdPos.lng.toString();
 	$('#meuModal').modal('show');
 }
