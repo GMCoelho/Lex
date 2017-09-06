@@ -8,6 +8,7 @@ L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}'
 var newMarker;
 var conf = false;
 var staticMarker = true;
+var x;
 
 $("#meuModal").on('hide.bs.modal', function () {
 	if(conf == false){
@@ -29,11 +30,11 @@ $("#meuModal").on('hide.bs.modal', function () {
 			  "showMethod": "fadeIn",
 			  "hideMethod": "fadeOut"
 			}
-		var x = toastr.warning("Você não confirmou a localização do posto. Clique aqui para confirmar.", "Atenção: ");
-		$(x.el).click(function(){
-			abreModalCadastro(newMarker.getlatlng());
-		});
+		x = toastr.warning("Você não confirmou a localização do posto. Clique aqui para confirmar.", "Atenção: ");
 	}
+});
+$(x.el).click(function(){
+	abreModalCadastro(newMarker.getlatlng());
 });
 
 $("#confLoc").on('click', function (){
