@@ -5,7 +5,7 @@ L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}'
 	maxZoom: 18
 }).addTo(mymap);
 
-var newMarker;
+var newMarker = L.marker([-20.35199, -40.29699], {draggable:'true'}, {opacity: 0});
 var conf = false;
 var staticMarker = true;
 var pos = [-20.35199, -40.29699];
