@@ -155,7 +155,7 @@
 	border-color: midnightblue !important;
 	padding: 10px 5% 10px 5% !important;
 	border-radius: 4px 4px 4px 30px !important;
-	width: 49%;
+	width: 50%;
 }
 
 .botaoConf:hover, .botaConf:active, .botaConf:focus{
@@ -170,7 +170,7 @@
 	border-color: midnightblue !important;
 	padding: 10px 5% 10px 4%;
 	border-radius: 4px 4px 30px 4px !important;
-	width: 49%;
+	width: 50%;
 }
 
 .botaoEdit:hover, botaoEdit:active, botaoEdit:focus{
@@ -180,4 +180,8 @@
 
 .modal-footer .btn+.btn{
 	margin-left: 0px !important;	
+}
+
+.btn-group, .btn-group-vertical {
+    display: initial !important;
 }
