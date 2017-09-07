@@ -185,3 +185,7 @@
 .btn-group, .btn-group-vertical {
     display: initial !important;
 }
+
+.form-group {
+    margin-bottom: 10px !important;
+}
