@@ -53,39 +53,72 @@
                             <center><h5 class="modal-title" id="PostoLoc"></h5></center>
                         </div>
                         <div class="modal-body" style="border: 2px solid; border-color: midnightblue;">
-                            <p>
-                            <form>
-                                <div class="form-group">
-                                    <label for="nomePosto">Nome:</label>
-                                    <input type="text" class="form-control" id="nomePosto" placeholder="Exemplo: Posto ABC">
-                                </div>
-                                <div class="form-group">
-                                    <center><h5>Informe ao menos um preço abaixo:</h5></center><p></p>
-                                    <label for="precoGC">Gasolina Comum (GC):</label>
-                                    <input type="text" class="form-control" id="precoGC">
-
-                                    <label for="precoGA">Gasolina Aditivada (GA):</label>
-                                    <input type="text" class="form-control" id="precoGA">
-
-                                    <label for="precoEt">Etanol (Et):</label>
-                                    <input type="text" class="form-control" id="precoEt">
-
-                                    <label for="precoDs">Diesel (Ds):</label>
-                                    <input type="text" class="form-control" id="precoDs">
-
-                                    <label for="precoGN">Gás Natural Veicular (GNV):</label>
-                                    <input type="text" class="form-control" id="precoGN">
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox"> Eu recomendo esse Posto!</label>
-                                </div>
-                                <!--<button type="submit" class="btn btn-default">Submit</button>-->
-                            </form>
-                            <p></p>
+                            <div class="container-fluid">
+                                <form>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label for="nomePosto">Nome:</label>
+                                                <input type="text" class="form-control" id="nomePosto" placeholder="Exemplo: Posto ABC">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <center><h5>Informe ao menos um preço abaixo:</h5></center><p></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="precoGC">Gasolina Comum (GC):</label>
+                                                <input type="text" class="form-control" id="precoGC">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="precoGA">Gasolina Aditivada (GA):</label>
+                                                <input type="text" class="form-control" id="precoGA">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="precoEt">Etanol (Et):</label>
+                                                <input type="text" class="form-control" id="precoEt">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="precoDs">Diesel (Ds):</label>
+                                                <input type="text" class="form-control" id="precoDs">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-4">
+                                                <label for="precoGN">Gás Natural Veicular (GNV):</label>
+                                                <input type="text" class="form-control" id="precoGN">
+                                            </div>
+                                            <div class="col-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Eu recomendo esse Posto!</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                         <div class="modal-footer" style="background-color: midnightblue;border-top: 0px;color: #FFF;border-radius: 0px 0px 30px 30px;padding: 0px 1px 1px 0px !important;">
+                            <div class="btn-group" role="group">
                                 <button type="button" class="btn botaoConf" id="confLoc">Confirmar</button>
                                 <a class="btn botaoEdit" id="editarLoc">Editar Localização</a>
+                            </div>
                         </div>
                     </div>
 
