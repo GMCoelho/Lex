@@ -32,7 +32,7 @@ $("#meuModal").on('hide.bs.modal', function () {
 			  "showMethod": "fadeIn",
 			  "hideMethod": "fadeOut"
 			}
-		toastr["warning"]("Você não confirmou a localização do posto. Clique novamente no mapa para confirmar.", "Atenção:")
+		toastr["warning"]("Você não confirmou a localização do posto. Clique novamente no mapa para confirmar.", "Atenção:");
 	}
 });
 
