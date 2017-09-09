@@ -198,17 +198,30 @@
 }
 
 .barra ul{
-	list-style: none;	
-	position: relative;
-	margin: auto;
+	list-style: none;
+    	position: relative;
+    	margin: auto;
+    	padding: 0;
+    	text-align: center;
+    	width: fit-content;
 }
 
 .barra ul li{
-	background: rgba(255,255,255,0.2);
+	background: rgba(0, 0, 0, 0.2);
+    	height: 50px;
+	float: left;
+}
+
+.barra ul li:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.barra ul li:hover a {
+    text-decoration: none;
 }
 
 .barra ul li a{
-	padding-left: 5px;
-	padding-right: 5px;
-	height: 50px;
+	padding: 15px;
+    	line-height: 45px;
+   	color: #fff;
 }
